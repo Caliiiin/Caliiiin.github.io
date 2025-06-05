@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Carrot.png">
+  <link rel="icon" href="/img/Carrot.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Calin">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="1.标题&#x2F;章节1.1层级如下图所示，共6级依次递进  层级6从属于层级5从属于层级4…每创建一个层级会生成相应定位点以便预览大纲快速跳转 代码示例 # 层级1 ## 层级2 ### 层级3 #### 层级4 ##### 层级5 ###### 层级6    2.文本样式2.1大小如下所示，共7级依次递进 永远相信美好的事情即将发生 永远相信美好的事情即将发生 永远相信美好的事情即将发生 永">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown-基本撰写和语法格式">
+<meta property="og:url" content="https://caliiiin.github.io/2025/05/28/Markdown-%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Calin&#39;s Blog">
+<meta property="og:description" content="1.标题&#x2F;章节1.1层级如下图所示，共6级依次递进  层级6从属于层级5从属于层级4…每创建一个层级会生成相应定位点以便预览大纲快速跳转 代码示例 # 层级1 ## 层级2 ### 层级3 #### 层级4 ##### 层级5 ###### 层级6    2.文本样式2.1大小如下所示，共7级依次递进 永远相信美好的事情即将发生 永远相信美好的事情即将发生 永远相信美好的事情即将发生 永">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://caliiiin.github.io/img/%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-%E5%B1%82%E7%BA%A7%E7%A4%BA%E4%BE%8B.webp">
+<meta property="og:image" content="https://caliiiin.github.io/img/Github%E8%AD%A6%E6%8A%A5%E7%A4%BA%E4%BE%8B.webp">
+<meta property="article:published_time" content="2025-05-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-03T03:49:08.440Z">
+<meta property="article:author" content="Calin">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://caliiiin.github.io/img/%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-%E5%B1%82%E7%BA%A7%E7%A4%BA%E4%BE%8B.webp">
+  
+  
+  
+  <title>Markdown-基本撰写和语法格式 - Calin&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"caliiiin.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Calin&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Markdown-基本撰写和语法格式"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-05-28 00:00" pubdate>
+          2025年5月28日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Markdown-基本撰写和语法格式</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-标题-章节"><a href="#1-标题-章节" class="headerlink" title="1.标题&#x2F;章节"></a>1.标题&#x2F;章节</h1><h2 id="1-1层级"><a href="#1-1层级" class="headerlink" title="1.1层级"></a>1.1层级</h2><p><strong>如下图所示，共6级依次递进</strong></p>
+<p><img src="/img/%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-%E5%B1%82%E7%BA%A7%E7%A4%BA%E4%BE%8B.webp" srcset="/img/loading.gif" lazyload alt="层级示例"></p>
+<p><strong>层级6从属于层级5从属于层级4…每创建一个层级会生成相应定位点以便预览大纲快速跳转</strong></p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-section"># 层级1</span>
+<span class="hljs-section">## 层级2</span>
+<span class="hljs-section">### 层级3</span>
+<span class="hljs-section">#### 层级4</span>
+<span class="hljs-section">##### 层级5</span>
+<span class="hljs-section">###### 层级6</span></code></pre></div>
+
+
+
+<h1 id="2-文本样式"><a href="#2-文本样式" class="headerlink" title="2.文本样式"></a>2.文本样式</h1><h2 id="2-1大小"><a href="#2-1大小" class="headerlink" title="2.1大小"></a>2.1大小</h2><p><strong>如下所示，共7级依次递进</strong></p>
+<p><font size=7>永远相信美好的事情即将发生</font></p>
+<p><font size=6>永远相信美好的事情即将发生</font></p>
+<p><font size=5>永远相信美好的事情即将发生</font></p>
+<p><font size=4>永远相信美好的事情即将发生</font></p>
+<p><font size=3>永远相信美好的事情即将发生</font></p>
+<p><font size=2>永远相信美好的事情即将发生</font></p>
+<p><font size=1>永远相信美好的事情即将发生</font></p>
+<p><strong>Size&#x3D;7大于Size&#x3D;6大于Size&#x3D;5…</strong></p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">7</span>&gt;</span></span>永远相信美好的事情即将发生<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">6</span>&gt;</span></span>永远相信美好的事情即将发生<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">5</span>&gt;</span></span>永远相信美好的事情即将发生<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">4</span>&gt;</span></span>永远相信美好的事情即将发生<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">3</span>&gt;</span></span>永远相信美好的事情即将发生<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">2</span>&gt;</span></span>永远相信美好的事情即将发生<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">1</span>&gt;</span></span>永远相信美好的事情即将发生<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span></code></pre></div>
+
+<div class="note note-info">
+            <p>Note<br><strong>Size&gt;7最终将以Size&#x3D;7显示</strong></p>
+          </div>
+
+<h2 id="2-2加粗-斜体"><a href="#2-2加粗-斜体" class="headerlink" title="2.2加粗&amp;斜体"></a>2.2加粗&amp;斜体</h2><p><strong>加粗</strong></p>
+<p><strong>ABC</strong>比ABC要粗些</p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-strong">**ABC**</span></code></pre></div>
+
+<p><strong>斜体</strong></p>
+<p><em>ABC</em>是ABC的斜体</p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-emphasis">*ABC*</span></code></pre></div>
+
+<div class="note note-info">
+            <p>Note<br><strong>全部加粗及为斜体</strong></p><p><em><strong>ABC</strong></em>不仅加粗还是斜体</p><div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-strong">**<span class="hljs-emphasis">*ABC*</span>**</span></code></pre></div><p><strong>全部加粗部分斜体</strong></p><p><strong>AB<em>CD</em>EF</strong>全部加粗但<em><strong>CD</strong></em>为斜体</p><div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-strong">**AB<span class="hljs-emphasis">*CD*</span>EF**</span></code></pre></div><p><strong>全部斜体部分加粗</strong></p><p><em>AB<strong>CD</strong>EF</em>全部为斜体但<em><strong>CD</strong></em>加粗</p><div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-emphasis">*AB<span class="hljs-strong">**CD**</span>EF*</span></code></pre></div>
+          </div>
+
+<h2 id="2-3上标-下标"><a href="#2-3上标-下标" class="headerlink" title="2.3上标&amp;下标"></a>2.3上标&amp;下标</h2><p><strong>上标</strong></p>
+<p>AB<sup>CD</sup>EF中的CD更高</p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+AB<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span></span>CD<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span></span>EF</code></pre></div>
+
+<p><strong>下标</strong></p>
+<p>AB<sub>CD</sub>EF中的CD更低</p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+AB<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">sub</span>&gt;</span></span>CD<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">sub</span>&gt;</span></span>EF</code></pre></div>
+
+<h2 id="2-4删除线-下划线"><a href="#2-4删除线-下划线" class="headerlink" title="2.4删除线&amp;下划线"></a>2.4删除线&amp;下划线</h2><p><strong>删除线</strong></p>
+<p><del>我喜欢她</del>但我更喜欢无畏的自己</p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+~~我喜欢她~~但我更喜欢无畏的自己</code></pre></div>
+
+<p><strong>下划线</strong></p>
+<p><ins>这很重要，划重点</ins></p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ins</span>&gt;</span></span>这很重要，划重点<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span></span></code></pre></div>
+
+
+
+<h1 id="3-文本颜色"><a href="#3-文本颜色" class="headerlink" title="3.文本颜色"></a>3.文本颜色</h1><h2 id="3-1前景色"><a href="#3-1前景色" class="headerlink" title="3.1前景色"></a>3.1前景色</h2><p><strong>使用颜色名称格式</strong></p>
+<p><font color="red">RED-红色</font></p>
+<p><font color="green">GREEN-绿色</font></p>
+<p><font color="blue">BLUE-蓝色</font></p>
+<div class="code-wrapper"><pre><code class="hljs html">代码示例
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;RED&quot;</span>&gt;</span>RED-红色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;green&quot;</span>&gt;</span>GREEN-绿色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;blue&quot;</span>&gt;</span>BLUE-蓝色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></code></pre></div>
+
+<div class="note note-info">
+            <p>Note<br><strong>使用HEX格式</strong></p><p><font color="#FF0000">RED-红色</font></p><p><font color="#008000">GREEN-绿色</font></p><p><font color="#0000FF">BLUE-蓝色</font></p><div class="code-wrapper"><pre><code class="hljs html">代码示例
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;#FF0000&quot;</span>&gt;</span>RED-红色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;#008000&quot;</span>&gt;</span>GREEN-绿色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;#0000FF&quot;</span>&gt;</span>BLUE-蓝色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></code></pre></div>
+          </div>
+
+<h2 id="3-2背景色"><a href="#3-2背景色" class="headerlink" title="3.2背景色"></a>3.2背景色</h2><p><strong>使用颜色名称格式</strong></p>
+<p><font color="#FFFFFF"><font style="background: red">RED-红色</font></font></p>
+<p><font color="#FFFFFF"><font style="background: green">GREEN-绿色</font></font></p>
+<p><font color="#FFFFFF"><font style="background: blue">BLUE-蓝色</font></font></p>
+<div class="code-wrapper"><pre><code class="hljs html">代码示例
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: red&quot;</span>&gt;</span>RED-红色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: green&quot;</span>&gt;</span>GREEN-绿色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: blue&quot;</span>&gt;</span>BLUE-蓝色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></code></pre></div>
+
+<div class="note note-info">
+            <p>Note<br><strong>使用HEX格式</strong></p><p><font color="#FFFFFF"><font style="background: #FF0000">RED-红色</font></font></p><p><font color="#FFFFFF"><font style="background: #008000">GREEN-绿色</font></font></p><p><font color="#FFFFFF"><font style="background: #0000FF">BLUE-蓝色</font></font></p><div class="code-wrapper"><pre><code class="hljs html">代码示例
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: #FF0000&quot;</span>&gt;</span>RED-红色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: #008000&quot;</span>&gt;</span>GREEN-绿色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: #0000FF&quot;</span>&gt;</span>BLUE-蓝色<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></code></pre></div>
+          </div>
+
+<div class="note note-success">
+            <p>Tip<br><strong>同时更改前景色与背景色</strong><br><font style="background: #1F883D"><font color="#ffb000">Live at ease like a carrot!</font></font></p><div class="code-wrapper"><pre><code class="hljs html">代码示例
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: #1F883D&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;#ffb000&quot;</span>&gt;</span>Live at ease like a carrot!<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></code></pre></div>
+          </div>
+
+
+
+
+<h1 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h1><h2 id="4-1引用文本"><a href="#4-1引用文本" class="headerlink" title="4.1引用文本"></a>4.1引用文本</h2><p><strong>右侧灰色索引及垂直线，字体为灰色</strong></p>
+<blockquote>
+<p>Calin的网名是隔壁萝卜</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+&gt;Calin的网名是隔壁萝卜</code></pre></div>
+
+<h2 id="4-2引用代码"><a href="#4-2引用代码" class="headerlink" title="4.2引用代码"></a>4.2引用代码</h2><p><strong>单行代码</strong></p>
+<p><code>sudo -i</code></p>
+<div class="code-wrapper"><pre><code class="hljs bash">代码示例
+`<span class="hljs-built_in">sudo</span> -i`</code></pre></div>
+
+<p><strong>多行代码</strong></p>
+<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> -i
+apt update
+apt upgrade</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-code">```</span>
+<span class="hljs-code">sudo -i</span>
+<span class="hljs-code">apt update</span>
+<span class="hljs-code">apt upgrade</span>
+<span class="hljs-code">```</span></code></pre></div>
+
+<div class="note note-info">
+            <p>Note<br><strong>代码中含有反引号</strong></p><div class="code-wrapper"><pre><code class="hljs markdown"><span class="hljs-code">```</span>
+<span class="hljs-code">sudo -i</span>
+<span class="hljs-code">rm -rf /*</span>
+<span class="hljs-code">```</span></code></pre></div><div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-section">#若即将引用代码带有反引号且数量&gt;=3，则引用代码书写的反引号数量应+1</span>
+<span class="hljs-code">````</span>
+<span class="hljs-code">```</span>
+<span class="hljs-code">sudo -i</span>
+<span class="hljs-code">rm -rf /*</span>
+<span class="hljs-code">```</span>
+<span class="hljs-code">````</span></code></pre></div>
+          </div>
+
+<div class="note note-success">
+            <p>Tip<br><strong>代码引用语法高亮</strong></p><div class="code-wrapper"><pre><code class="hljs markdown"><span class="hljs-section">#无语法高亮示例</span>
+sudo -i
+rm -rf /<span class="hljs-emphasis">*</span></code></pre></div><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment">#有语法高亮示例</span>
+<span class="hljs-built_in">sudo</span> -i
+<span class="hljs-built_in">rm</span> -rf /*</code></pre></div><div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-section">#bash可为其他语言，如C,Java等</span>
+<span class="hljs-code">```bash</span>
+<span class="hljs-code">#有高亮语法示例</span>
+<span class="hljs-code">sudo -i</span>
+<span class="hljs-code">rm -rf /*</span>
+<span class="hljs-code">```</span></code></pre></div>
+          </div>
+
+<h2 id="4-3引用头部（仅Github警告样式）"><a href="#4-3引用头部（仅Github警告样式）" class="headerlink" title="4.3引用头部（仅Github警告样式）"></a>4.3引用头部（仅Github警告样式）</h2><p><img src="/img/Github%E8%AD%A6%E6%8A%A5%E7%A4%BA%E4%BE%8B.webp" srcset="/img/loading.gif" lazyload alt="Github警报示例"></p>
+<div class="code-wrapper"><pre><code class="hljs markdown">代码示例
+<span class="hljs-quote">&gt; [!NOTE]</span>
+<span class="hljs-quote">&gt; Useful information that users should know, even when skimming content.</span>
+
+<span class="hljs-quote">&gt; [!TIP]</span>
+<span class="hljs-quote">&gt; Helpful advice for doing things better or more easily.</span>
+
+<span class="hljs-quote">&gt; [!IMPORTANT]</span>
+<span class="hljs-quote">&gt; Key information users need to know to achieve their goal.</span>
+
+<span class="hljs-quote">&gt; [!WARNING]</span>
+<span class="hljs-quote">&gt; Urgent info that needs immediate user attention to avoid problems.</span>
+
+<span class="hljs-quote">&gt; [!CAUTION]</span>
+<span class="hljs-quote">&gt; Advises about risks or negative outcomes of certain actions.</span></code></pre></div>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Markdown%E5%AD%A6%E4%B9%A0/" class="category-chain-item">Markdown学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Markdown-基本撰写和语法格式</div>
+      <div>https://caliiiin.github.io/2025/05/28/Markdown-基本撰写和语法格式/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Calin</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年5月28日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-cc-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
