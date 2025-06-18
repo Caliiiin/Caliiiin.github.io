@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="1.图像表格1.1 图像 当图片存于默认自述文件下级目录时 1234567代码示例# - Desktop#		-  README#			- 基本撰写和格式语法.md #			- assets#				- Example.PNG![图像示例](.&#x2F;assets&#x2F;图像示例.PNG)  当图片存放于默认自述文件上级目录中时 1234567代码示例# - Desktop#		-  README#			-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown-基本撰写和语法格式2">
+<meta property="og:url" content="http://example.com/2025/05/28/Markdown-%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F2/index.html">
+<meta property="og:site_name" content="Calin&#39;s Blog">
+<meta property="og:description" content="1.图像表格1.1 图像 当图片存于默认自述文件下级目录时 1234567代码示例# - Desktop#		-  README#			- 基本撰写和格式语法.md #			- assets#				- Example.PNG![图像示例](.&#x2F;assets&#x2F;图像示例.PNG)  当图片存放于默认自述文件上级目录中时 1234567代码示例# - Desktop#		-  README#			-">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-%E5%9B%BE%E5%83%8F%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="article:published_time" content="2025-05-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-06T09:31:17.036Z">
+<meta property="article:author" content="Calin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-%E5%9B%BE%E5%83%8F%E7%A4%BA%E4%BE%8B.PNG">
+
+
+<link rel="canonical" href="http://example.com/2025/05/28/Markdown-%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/05/28/Markdown-%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F2/","path":"2025/05/28/Markdown-基本撰写和语法格式2/","title":"Markdown-基本撰写和语法格式2"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Markdown-基本撰写和语法格式2 | Calin's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Calin's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%9B%BE%E5%83%8F%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.</span> <span class="nav-text">1.图像表格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%9B%BE%E5%83%8F"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 表格</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%AE%B5%E8%90%BD-%E6%B3%A8%E9%87%8A"><span class="nav-number">2.</span> <span class="nav-text">2.段落&#x2F;注释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%88%86%E6%AE%B5"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 分段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E9%93%BE%E6%8E%A5-%E5%AE%9A%E4%BD%8D%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">3.链接&#x2F;定位点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 网页链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E6%A0%87%E9%A2%98-%E7%AB%A0%E8%8A%82%E9%93%BE%E6%8E%A5"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 标题&#x2F;章节链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E7%9B%B8%E5%AF%B9%E9%93%BE%E6%8E%A5"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 相对链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9A%E4%BD%8D%E7%82%B9"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 自定义定位点</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Calin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/28/Markdown-%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Calin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Calin's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Markdown-基本撰写和语法格式2 | Calin's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Markdown-基本撰写和语法格式2
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-05-28 00:00:00" itemprop="dateCreated datePublished" datetime="2025-05-28T00:00:00+08:00">2025-05-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-06 17:31:17" itemprop="dateModified" datetime="2025-06-06T17:31:17+08:00">2025-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Markdown%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Markdown学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="1-图像表格"><a href="#1-图像表格" class="headerlink" title="1.图像表格"></a>1.图像表格</h1><h2 id="1-1-图像"><a href="#1-1-图像" class="headerlink" title="1.1 图像"></a>1.1 图像</h2><p><img src="/./img/%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-%E5%9B%BE%E5%83%8F%E7%A4%BA%E4%BE%8B.PNG" alt="图像示例"></p>
+<p><strong>当图片存于默认自述文件下级目录时</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section"># - Desktop</span></span><br><span class="line"><span class="section">#		-  README</span></span><br><span class="line"><span class="section">#			- 基本撰写和格式语法.md </span></span><br><span class="line"><span class="section">#			- assets</span></span><br><span class="line"><span class="section">#				- Example.PNG</span></span><br><span class="line">![<span class="string">图像示例</span>](<span class="link">./assets/图像示例.PNG</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>当图片存放于默认自述文件上级目录中时</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section"># - Desktop</span></span><br><span class="line"><span class="section">#		-  README</span></span><br><span class="line"><span class="section">#			- 基本撰写和格式语法.md </span></span><br><span class="line"><span class="section">#			- assets</span></span><br><span class="line"><span class="section"># - Example.PNG</span></span><br><span class="line">![<span class="string">Example</span>](<span class="link">../Example.PNG</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-表格"><a href="#1-2-表格" class="headerlink" title="1.2 表格"></a>1.2 表格</h2><p><strong>无序列表</strong></p>
+<ul>
+<li>洗漱用品</li>
+</ul>
+<ul>
+<li>零食饮料</li>
+</ul>
+<ul>
+<li>柴米油盐</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section">#(-)(<span class="emphasis">*)(+)表达效果相同，均可</span></span></span><br><span class="line"><span class="emphasis"><span class="section">- 洗漱用品</span></span></span><br><span class="line"><span class="emphasis"><span class="section">*</span> 零食饮料</span></span><br><span class="line"><span class="bullet">+</span> 柴米油盐</span><br></pre></td></tr></table></figure>
+
+<p><strong>有序列表</strong></p>
+<ol>
+<li>预订餐厅</li>
+<li>打电话给Calin</li>
+<li>一起用餐</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="bullet">1.</span> 预订餐厅</span><br><span class="line"><span class="bullet">2.</span> 打电话给Calin</span><br><span class="line"><span class="bullet">3.</span> 一起用餐</span><br></pre></td></tr></table></figure>
+
+<p><strong>嵌套列表</strong></p>
+<pre><code>- User
+	- Calin 
+		- Desktop 
+			- Bin
+		- Download
+	- Share
+</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="bullet">	-</span> User</span><br><span class="line"><span class="bullet">		-</span> Calin </span><br><span class="line"><span class="bullet">			-</span> Desktop </span><br><span class="line"><span class="bullet">				-</span> Bin</span><br><span class="line"><span class="bullet">			-</span> Download</span><br><span class="line"><span class="bullet">		-</span> Share</span><br></pre></td></tr></table></figure>
+
+<p><strong>任务列表</strong></p>
+<ul>
+<li><p><input checked="" disabled="" type="checkbox"> 
+阅读学习</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+外出摄影</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+写代码</p>
+</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="bullet">-</span> [x] 阅读学习</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> [ ] 外出摄影</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> [ ] 写代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>图示列表</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">时刻&#x2F;星期</th>
+<th align="center">周日</th>
+<th align="center">周一</th>
+<th align="center">周二</th>
+<th align="center">周三</th>
+<th align="center">周四</th>
+<th align="center">周五</th>
+<th align="center">周六</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6:00</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">7:00</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">8:00</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section">#必须先写表头，垂直线(|)相当于表格的边框</span></span><br><span class="line"><span class="section">#若需要出现n列，则需要n+1个垂直线</span></span><br><span class="line"><span class="section">#垂直线中仅文字间空格有效</span></span><br><span class="line">|时刻/星期|周日|周一|周二|周三|周四|周五|周六|</span><br><span class="line"><span class="section">#表头写完后换行以调整表格内文字位置，须输入表头相同个数垂直线</span></span><br><span class="line"><span class="section">#|:--|左对齐，|:-:|居中对齐，|--:|右对齐</span></span><br><span class="line">|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|</span><br><span class="line"><span class="section">#再次换行以写入新行</span></span><br><span class="line">|6:00||||||||</span><br><span class="line">|7:00||||||||</span><br><span class="line">|8:00||||||||</span><br></pre></td></tr></table></figure>
+
+<p><strong>序号级别</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">第一层</th>
+<th align="center">第二层</th>
+<th align="center">第三层</th>
+<th align="center">第四层</th>
+<th align="center">第五层</th>
+<th align="center">第六层</th>
+<th align="center">第七层</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">一、</td>
+<td align="center">（一）</td>
+<td align="center">1.</td>
+<td align="center">（1）</td>
+<td align="center">①</td>
+<td align="center">A.</td>
+<td align="center">a.</td>
+</tr>
+<tr>
+<td align="center">二、</td>
+<td align="center">（二）</td>
+<td align="center">2.</td>
+<td align="center">（2）</td>
+<td align="center">②</td>
+<td align="center">B.</td>
+<td align="center">b.</td>
+</tr>
+<tr>
+<td align="center">三、</td>
+<td align="center">（三）</td>
+<td align="center">3.</td>
+<td align="center">（3）</td>
+<td align="center">③</td>
+<td align="center">C.</td>
+<td align="center">c.</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">（A）</td>
+<td align="center">（a）</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">（B）</td>
+<td align="center">（b）</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">（C）</td>
+<td align="center">（c）</td>
+</tr>
+</tbody></table>
+<h1 id="2-段落-注释"><a href="#2-段落-注释" class="headerlink" title="2.段落&#x2F;注释"></a>2.段落&#x2F;注释</h1><h2 id="2-1-分段"><a href="#2-1-分段" class="headerlink" title="2.1 分段"></a>2.1 分段</h2><p><strong>空行</strong></p>
+<p><strong>在编辑器中，连续空取三行，最终将显示空取一行</strong></p>
+<p><strong>水平分割线</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section">#6个英文连字符</span></span><br><span class="line">------</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-注释"><a href="#2-2-注释" class="headerlink" title="2.2 注释"></a>2.2 注释</h2><p><strong>Markdown注释</strong></p>
+<p><strong>用于在书写时在代码旁批注，最终不予显示</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line">&lt;!-- 恨之入骨，爱之入髓，放下挂念，好好生活 --&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>脚注（需渲染器支持）</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line">海内[^1]存知己，天涯[^2]若比邻[^3]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">海内：四海之内，即全国各地，古代人认为我国疆土四周环海，所以称天下为四海之内。</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">天涯：天边，这里比喻极远的地方。</span></span><br><span class="line">[<span class="symbol">^3</span>]: <span class="link">比邻：并邻，近邻。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="3-链接-定位点"><a href="#3-链接-定位点" class="headerlink" title="3.链接&#x2F;定位点"></a>3.链接&#x2F;定位点</h1><h2 id="3-1-网页链接"><a href="#3-1-网页链接" class="headerlink" title="3.1 网页链接"></a>3.1 网页链接</h2><p><strong>直接链接</strong></p>
+<p><a target="_blank" rel="noopener" href="https://cn.bing.com/">https://cn.bing.com</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line">[<span class="string">https://cn.bing.com</span>](<span class="link">https://cn.bing.com</span>)</span><br></pre></td></tr></table></figure>
+
+<div class="note info"><p>Note</p>
+<p><strong>自定义链接名</strong></p>
+<p><a target="_blank" rel="noopener" href="https://cn.bing.com/">微软必应中国</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line">[<span class="string">微软必应中国</span>](<span class="link">https://cn.bing.com</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>自定义链接标题&#x2F;鼠标停滞即显文本</strong></p>
+<p><a target="_blank" rel="noopener" href="https://cn.bing.com/" title="浏览器搜索引擎">微软必应中国</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section">#须为英文引号</span></span><br><span class="line">[<span class="string">微软必应中国</span>](<span class="link">https://cn.bing.com &quot;浏览器搜索引擎&quot;</span>)</span><br></pre></td></tr></table></figure>
+</div>
+
+<h2 id="3-2-标题-章节链接"><a href="#3-2-标题-章节链接" class="headerlink" title="3.2 标题&#x2F;章节链接"></a>3.2 标题&#x2F;章节链接</h2><p><strong>跳转上一章节<a href="#1-1%E5%9B%BE%E5%83%8F">1.1图像</a></strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line">跳转上一章节[<span class="string">4.1引用文本</span>](<span class="link">#4-1引用文本</span>)</span><br></pre></td></tr></table></figure>
+
+<div class="note primary"><p>Important<br><strong>圆括号内不能包含空格、斜杠、点等，须用连字符代替</strong><br><strong>页内级别不同的标题内容一致时，圆括号内依旧保持一个井号</strong><br><strong>最小级可不用加连字符和数字，其上级需标记</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section"># How to be happy</span></span><br><span class="line"><span class="section">## How to be happy</span></span><br><span class="line"><span class="section">### How to be happy</span></span><br><span class="line">跳转至[<span class="string">How to be happy</span>](<span class="link">#-1How-to-be-happy</span>)</span><br><span class="line">跳转至[<span class="string">How to study well</span>](<span class="link">#-2How to be happy</span>)</span><br><span class="line">跳转至[<span class="string">How to study well</span>](<span class="link">#How to be happy</span>)</span><br></pre></td></tr></table></figure>
+</div>
+
+<h2 id="3-3-相对链接"><a href="#3-3-相对链接" class="headerlink" title="3.3 相对链接"></a>3.3 相对链接</h2><p><strong>用于跳转至目录下其他文件</strong></p>
+<div class="note primary"><p>Important<br><strong>用于默认展示的自述文件应存放在根目录</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section"># - Desktop</span></span><br><span class="line"><span class="section">#		- README</span></span><br><span class="line"><span class="section">#			- README2</span></span><br><span class="line"><span class="section">#				- Next.md</span></span><br><span class="line"><span class="section">#			- 基本撰写和格式语法.md </span></span><br><span class="line"><span class="section">#			- assets</span></span><br><span class="line">[<span class="string">打开下一篇文章</span>](<span class="link">./README2/Next.md</span>)</span><br></pre></td></tr></table></figure>
+</div>
+
+<h2 id="3-4-自定义定位点"><a href="#3-4-自定义定位点" class="headerlink" title="3.4 自定义定位点"></a>3.4 自定义定位点</h2><p><strong>可用于文内标记跳转而非标题&#x2F;章节</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section"># The Hare and The Tortoise</span></span><br><span class="line"></span><br><span class="line">A tortoise and a hare live in the forest. One day, a hare meets a tortoise.</span><br><span class="line"></span><br><span class="line">He asks the tortoise, ”Hi, tortoise. What are you doing?”</span><br><span class="line"></span><br><span class="line">“I am running.” The tortoise says.</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">&quot;back-to-read&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line">“Haha! Running? You are too slow! Let’s have a race. I will show you what running is.” The hare laughs at the tortoise.</span><br><span class="line"></span><br><span class="line">“Ok. I believe I will win.” The tortoise says.</span><br><span class="line">So they decide to have a race to see who run faster.</span><br><span class="line">[<span class="string">返回阅读</span>](<span class="link">#back-to-read</span>)</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/05/28/Markdown-%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F/" rel="next" title="Markdown-基本撰写和语法格式">
+                  Markdown-基本撰写和语法格式 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Calin</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="1.主区域1.1 Navigator Area&#x2F;导航区域 导航区域用于查找资源、定位书签、排错… 1.2 Debug Area&#x2F;调试区域代码区域与编辑区域共称调试区域  代码区域用于编辑项目代码  编辑区域跟随代码区域变动 1.3 Inspector Area&#x2F;检查区域 检查区域用于显示当前资源属性、控件属性… 当代码区域定位到具体语法时，在检查区域可以视图方式调整值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SwiftUI-认识基本界面">
+<meta property="og:url" content="http://example.com/2025/06/06/SwiftUI-%E8%AE%A4%E8%AF%86%E5%9F%BA%E6%9C%AC%E7%95%8C%E9%9D%A2/index.html">
+<meta property="og:site_name" content="Calin&#39;s Blog">
+<meta property="og:description" content="1.主区域1.1 Navigator Area&#x2F;导航区域 导航区域用于查找资源、定位书签、排错… 1.2 Debug Area&#x2F;调试区域代码区域与编辑区域共称调试区域  代码区域用于编辑项目代码  编辑区域跟随代码区域变动 1.3 Inspector Area&#x2F;检查区域 检查区域用于显示当前资源属性、控件属性… 当代码区域定位到具体语法时，在检查区域可以视图方式调整值">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/%E5%AF%BC%E8%88%AA%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E7%BC%96%E8%BE%91%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E6%A3%80%E6%9F%A5%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E8%B5%84%E6%BA%90%E6%8E%A7%E5%88%B6%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E4%B9%A6%E7%AD%BE%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E6%9F%A5%E6%89%BE%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E9%94%99%E8%AF%AF%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E6%B5%8B%E8%AF%95%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E8%B0%83%E8%AF%95%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E6%96%AD%E7%82%B9%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E6%8A%A5%E5%91%8A%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E6%96%87%E4%BB%B6%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E5%8E%86%E5%8F%B2%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E5%BF%AB%E9%80%9F%E5%B8%AE%E5%8A%A9%E5%99%A8%E6%A3%80%E6%9F%A5%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E6%98%93%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E5%B1%9E%E6%80%A7%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="http://example.com/img/%E5%B7%A5%E5%85%B7%E6%A0%8F%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="article:published_time" content="2025-06-06T08:42:51.597Z">
+<meta property="article:modified_time" content="2025-06-07T03:06:25.091Z">
+<meta property="article:author" content="Calin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/%E5%AF%BC%E8%88%AA%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG">
+
+
+<link rel="canonical" href="http://example.com/2025/06/06/SwiftUI-%E8%AE%A4%E8%AF%86%E5%9F%BA%E6%9C%AC%E7%95%8C%E9%9D%A2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/06/06/SwiftUI-%E8%AE%A4%E8%AF%86%E5%9F%BA%E6%9C%AC%E7%95%8C%E9%9D%A2/","path":"2025/06/06/SwiftUI-认识基本界面/","title":"SwiftUI-认识基本界面"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>SwiftUI-认识基本界面 | Calin's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Calin's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%B8%BB%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.</span> <span class="nav-text">1.主区域</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Navigator-Area-%E5%AF%BC%E8%88%AA%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Navigator Area&#x2F;导航区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Debug-Area-%E8%B0%83%E8%AF%95%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Debug Area&#x2F;调试区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Inspector-Area-%E6%A3%80%E6%9F%A5%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 Inspector Area&#x2F;检查区域</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E8%AF%A6%E7%BB%86%E5%88%86%E5%8C%BA"><span class="nav-number">2.</span> <span class="nav-text">2.详细分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Navigator-%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 Navigator&#x2F;导航</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Project-Navigator-%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 Project Navigator&#x2F;项目导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Source-Control-Navigator-%E8%B5%84%E6%BA%90%E6%8E%A7%E5%88%B6%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 Source Control Navigator&#x2F;资源控制导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-Bookmark-Navigator-%E4%B9%A6%E7%AD%BE%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 Bookmark Navigator&#x2F;书签导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-Find-Navigator-%E6%9F%A5%E6%89%BE%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4 Find Navigator&#x2F;查找导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-Issue-Navigator-%E9%94%99%E8%AF%AF%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.5.</span> <span class="nav-text">2.1.5 Issue Navigator&#x2F;错误导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-6-Test-Navigator-%E6%B5%8B%E8%AF%95%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.6.</span> <span class="nav-text">2.1.6 Test Navigator&#x2F;测试导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-7-Debug-Navigator-%E8%B0%83%E8%AF%95%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.7.</span> <span class="nav-text">2.1.7 Debug Navigator&#x2F;调试导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-8-Breakpoints-Navigator-%E6%96%AD%E7%82%B9%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.8.</span> <span class="nav-text">2.1.8  Breakpoints Navigator&#x2F;断点导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-9-Report-Navigator-%E6%8A%A5%E5%91%8A%E5%AF%BC%E8%88%AA"><span class="nav-number">2.1.9.</span> <span class="nav-text">2.1.9  Report Navigator&#x2F;报告导航</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Inspector-%E6%A3%80%E6%9F%A5%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Inspector&#x2F;检查器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-File-Inspector-%E6%96%87%E4%BB%B6%E6%A3%80%E6%9F%A5%E5%99%A8"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 File Inspector&#x2F;文件检查器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-History-Inspector-%E5%8E%86%E5%8F%B2%E6%A3%80%E6%9F%A5%E5%99%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 History Inspector&#x2F;历史检查器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-Quick-Help-Inspector-%E5%BF%AB%E9%80%9F%E5%B8%AE%E5%8A%A9%E6%A3%80%E6%9F%A5%E5%99%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3 Quick Help Inspector&#x2F;快速帮助检查器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-4-Accessibility-Inspector-%E6%98%93%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5%E5%99%A8"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.2.4 Accessibility Inspector&#x2F;易用性检查器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-5-Attributes-Inspector-%E5%B1%9E%E6%80%A7%E6%A3%80%E6%9F%A5%E5%99%A8"><span class="nav-number">2.2.5.</span> <span class="nav-text">2.2.5 Attributes Inspector&#x2F;属性检查器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Toolbar-%E5%B7%A5%E5%85%B7%E6%A0%8F"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Toolbar&#x2F;工具栏</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Calin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/06/06/SwiftUI-%E8%AE%A4%E8%AF%86%E5%9F%BA%E6%9C%AC%E7%95%8C%E9%9D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Calin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Calin's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="SwiftUI-认识基本界面 | Calin's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SwiftUI-认识基本界面
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-06 16:42:51" itemprop="dateCreated datePublished" datetime="2025-06-06T16:42:51+08:00">2025-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-07 11:06:25" itemprop="dateModified" datetime="2025-06-07T11:06:25+08:00">2025-06-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/SwiftUI%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">SwiftUI学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="1-主区域"><a href="#1-主区域" class="headerlink" title="1.主区域"></a>1.主区域</h1><h2 id="1-1-Navigator-Area-导航区域"><a href="#1-1-Navigator-Area-导航区域" class="headerlink" title="1.1 Navigator Area&#x2F;导航区域"></a>1.1 Navigator Area&#x2F;导航区域</h2><p><img src="/./img/%E5%AF%BC%E8%88%AA%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG" alt="导航区域示例"></p>
+<p><strong>导航区域用于查找资源、定位书签、排错…</strong></p>
+<h2 id="1-2-Debug-Area-调试区域"><a href="#1-2-Debug-Area-调试区域" class="headerlink" title="1.2 Debug Area&#x2F;调试区域"></a>1.2 Debug Area&#x2F;调试区域</h2><p><strong>代码区域与编辑区域共称调试区域</strong></p>
+<p><img src="/./img/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG" alt="代码区域示例"></p>
+<p><strong>代码区域用于编辑项目代码</strong></p>
+<p><img src="/./img/%E7%BC%96%E8%BE%91%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG" alt="编辑区域示例"></p>
+<p><strong>编辑区域跟随代码区域变动</strong></p>
+<h2 id="1-3-Inspector-Area-检查区域"><a href="#1-3-Inspector-Area-检查区域" class="headerlink" title="1.3 Inspector Area&#x2F;检查区域"></a>1.3 Inspector Area&#x2F;检查区域</h2><p><img src="/./img/%E6%A3%80%E6%9F%A5%E5%8C%BA%E5%9F%9F%E7%A4%BA%E4%BE%8B.PNG" alt="检查区域示例"></p>
+<p><strong>检查区域用于显示当前资源属性、控件属性…</strong></p>
+<p><strong>当代码区域定位到具体语法时，在检查区域可以视图方式调整值，随后编辑区域、代码区域被动同步</strong></p>
+<h1 id="2-详细分区"><a href="#2-详细分区" class="headerlink" title="2.详细分区"></a>2.详细分区</h1><h2 id="2-1-Navigator-导航"><a href="#2-1-Navigator-导航" class="headerlink" title="2.1 Navigator&#x2F;导航"></a>2.1 Navigator&#x2F;导航</h2><h3 id="2-1-1-Project-Navigator-项目导航"><a href="#2-1-1-Project-Navigator-项目导航" class="headerlink" title="2.1.1 Project Navigator&#x2F;项目导航"></a>2.1.1 Project Navigator&#x2F;项目导航</h3><p><img src="/./img/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="项目导航示例"></p>
+<p><strong>项目导航用于资源查找</strong></p>
+<h3 id="2-1-2-Source-Control-Navigator-资源控制导航"><a href="#2-1-2-Source-Control-Navigator-资源控制导航" class="headerlink" title="2.1.2 Source Control Navigator&#x2F;资源控制导航"></a>2.1.2 Source Control Navigator&#x2F;资源控制导航</h3><p><img src="/./img/%E8%B5%84%E6%BA%90%E6%8E%A7%E5%88%B6%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="资源控制导航示例"></p>
+<p><strong>资源控制导航用于观察Git仓库变化及控制</strong></p>
+<h3 id="2-1-3-Bookmark-Navigator-书签导航"><a href="#2-1-3-Bookmark-Navigator-书签导航" class="headerlink" title="2.1.3 Bookmark Navigator&#x2F;书签导航"></a>2.1.3 Bookmark Navigator&#x2F;书签导航</h3><p><img src="/./img/%E4%B9%A6%E7%AD%BE%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="书签导航示例"></p>
+<p><strong>书签导航用于快速定位代码区域中的行书签</strong></p>
+<h3 id="2-1-4-Find-Navigator-查找导航"><a href="#2-1-4-Find-Navigator-查找导航" class="headerlink" title="2.1.4 Find Navigator&#x2F;查找导航"></a>2.1.4 Find Navigator&#x2F;查找导航</h3><p><img src="/./img/%E6%9F%A5%E6%89%BE%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="查找导航示例"></p>
+<p><strong>查找导航用于快速查找代码</strong></p>
+<h3 id="2-1-5-Issue-Navigator-错误导航"><a href="#2-1-5-Issue-Navigator-错误导航" class="headerlink" title="2.1.5 Issue Navigator&#x2F;错误导航"></a>2.1.5 Issue Navigator&#x2F;错误导航</h3><p><img src="/./img/%E9%94%99%E8%AF%AF%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="错误导航示例"></p>
+<p><strong>错误导航用于排错</strong></p>
+<h3 id="2-1-6-Test-Navigator-测试导航"><a href="#2-1-6-Test-Navigator-测试导航" class="headerlink" title="2.1.6 Test Navigator&#x2F;测试导航"></a>2.1.6 Test Navigator&#x2F;测试导航</h3><p><img src="/./img/%E6%B5%8B%E8%AF%95%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="测试导航示例"></p>
+<p><strong>测试导航用于测试代码API调用、生存周期…</strong></p>
+<h3 id="2-1-7-Debug-Navigator-调试导航"><a href="#2-1-7-Debug-Navigator-调试导航" class="headerlink" title="2.1.7 Debug Navigator&#x2F;调试导航"></a>2.1.7 Debug Navigator&#x2F;调试导航</h3><p><img src="/./img/%E8%B0%83%E8%AF%95%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="调试导航示例"></p>
+<p><strong>调试导航用于记录调试会话</strong></p>
+<h3 id="2-1-8-Breakpoints-Navigator-断点导航"><a href="#2-1-8-Breakpoints-Navigator-断点导航" class="headerlink" title="2.1.8  Breakpoints Navigator&#x2F;断点导航"></a>2.1.8  Breakpoints Navigator&#x2F;断点导航</h3><p><img src="/./img/%E6%96%AD%E7%82%B9%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="断点导航示例"></p>
+<p><strong>断点导航用于对代码进行局部调试</strong></p>
+<h3 id="2-1-9-Report-Navigator-报告导航"><a href="#2-1-9-Report-Navigator-报告导航" class="headerlink" title="2.1.9  Report Navigator&#x2F;报告导航"></a>2.1.9  Report Navigator&#x2F;报告导航</h3><p><img src="/./img/%E6%8A%A5%E5%91%8A%E5%AF%BC%E8%88%AA%E7%A4%BA%E4%BE%8B.PNG" alt="报告导航示例"></p>
+<p><strong>报告导航用于记录构建会话，若构建失败后方会出现错误标识</strong></p>
+<h2 id="2-2-Inspector-检查器"><a href="#2-2-Inspector-检查器" class="headerlink" title="2.2 Inspector&#x2F;检查器"></a>2.2 Inspector&#x2F;检查器</h2><h3 id="2-2-1-File-Inspector-文件检查器"><a href="#2-2-1-File-Inspector-文件检查器" class="headerlink" title="2.2.1 File Inspector&#x2F;文件检查器"></a>2.2.1 File Inspector&#x2F;文件检查器</h3><p><img src="/./img/%E6%96%87%E4%BB%B6%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG" alt="文件检查器示例"></p>
+<p><strong>文件检查器用于显示当前编辑文件的名称、种类、路径…</strong></p>
+<h3 id="2-2-2-History-Inspector-历史检查器"><a href="#2-2-2-History-Inspector-历史检查器" class="headerlink" title="2.2.2 History Inspector&#x2F;历史检查器"></a>2.2.2 History Inspector&#x2F;历史检查器</h3><p><img src="/./img/%E5%8E%86%E5%8F%B2%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG" alt="历史检查器示例"></p>
+<p><strong>历史检查器用于复盘之前的检查</strong></p>
+<h3 id="2-2-3-Quick-Help-Inspector-快速帮助检查器"><a href="#2-2-3-Quick-Help-Inspector-快速帮助检查器" class="headerlink" title="2.2.3 Quick Help Inspector&#x2F;快速帮助检查器"></a>2.2.3 Quick Help Inspector&#x2F;快速帮助检查器</h3><p><img src="/./img/%E5%BF%AB%E9%80%9F%E5%B8%AE%E5%8A%A9%E5%99%A8%E6%A3%80%E6%9F%A5%E7%A4%BA%E4%BE%8B.PNG" alt="快速帮助器检查示例"></p>
+<p><strong>快速帮助检查器用于提示当前控件的语法和用途</strong></p>
+<h3 id="2-2-4-Accessibility-Inspector-易用性检查器"><a href="#2-2-4-Accessibility-Inspector-易用性检查器" class="headerlink" title="2.2.4 Accessibility Inspector&#x2F;易用性检查器"></a>2.2.4 Accessibility Inspector&#x2F;易用性检查器</h3><p><img src="/./img/%E6%98%93%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG" alt="易用性检查器示例"></p>
+<p><strong>易用性检查器用于测试一些辅助功能如旁白</strong></p>
+<h3 id="2-2-5-Attributes-Inspector-属性检查器"><a href="#2-2-5-Attributes-Inspector-属性检查器" class="headerlink" title="2.2.5 Attributes Inspector&#x2F;属性检查器"></a>2.2.5 Attributes Inspector&#x2F;属性检查器</h3><p><img src="/./img/%E5%B1%9E%E6%80%A7%E6%A3%80%E6%9F%A5%E5%99%A8%E7%A4%BA%E4%BE%8B.PNG" alt="属性检查器示例"></p>
+<p><strong>属性检查器用于修改控件的属性，如文本控件的大小字体…</strong></p>
+<h2 id="2-3-Toolbar-工具栏"><a href="#2-3-Toolbar-工具栏" class="headerlink" title="2.3 Toolbar&#x2F;工具栏"></a>2.3 Toolbar&#x2F;工具栏</h2><p><img src="/./img/%E5%B7%A5%E5%85%B7%E6%A0%8F%E7%A4%BA%E4%BE%8B.PNG" alt="工具栏示例"></p>
+<p><strong><font color="EA4025">红框</font>部分共称工具栏</strong></p>
+<p><strong><font color="F6CD5B">黄框</font>部分控制导航区域和检查区域的显隐</strong></p>
+<p><strong><font color="84B850">绿框</font>部分为构建按钮</strong></p>
+<p><strong><font color="5086F6">蓝框</font>部分为控件库，可拖拽至编辑区域</strong></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/03/SwiftUI-%E9%A6%96%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/" rel="prev" title="SwiftUI-首个项目创建">
+                  <i class="fa fa-angle-left"></i> SwiftUI-首个项目创建
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/06/13/NRAW%E8%BD%AC%E6%8D%A2RWG/" rel="next" title="视频制作-NRAW转换RWG">
+                  视频制作-NRAW转换RWG <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Calin</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
