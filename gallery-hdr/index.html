@@ -34,8 +34,8 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Caliiiin/web-image@main/gallery/HDR/%E5%A4%9C%E5%BC%A6.AVIF">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Caliiiin/web-image@main/gallery/HDR/%E5%8D%97%E4%BA%AC%E9%95%BF%E6%B1%9F%E5%A4%A7%E6%A1%A5.AVIF">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Caliiiin/web-image@refs/heads/main/gallery/HDR/%E4%BD%9B%E6%89%8B%E6%B9%96.AVIF">
-<meta property="article:published_time" content="2025-06-20T12:39:38.602Z">
-<meta property="article:modified_time" content="2025-06-20T12:36:49.538Z">
+<meta property="article:published_time" content="2025-06-20T12:50:08.987Z">
+<meta property="article:modified_time" content="2025-06-20T12:50:01.949Z">
 <meta property="article:author" content="Calin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Caliiiin/web-image@main/gallery/HDR/%E7%BB%9B%E9%87%8E.AVIF">
@@ -224,10 +224,14 @@
             overflow: auto;
             border: 1px solid #ccc;
             margin: 20px auto;
+					  color-scheme: only light;
+					  contain: strict;
         }
         .large-image {
             display: block;   
-            max-width: none;  
+            max-width: 100vw !important;
+					  max-height: 100vh !important;
+					  image-rendering: crisp-edges; 
         }
     </style>
 </head>
