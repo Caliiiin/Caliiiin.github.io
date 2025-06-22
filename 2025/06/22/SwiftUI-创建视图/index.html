@@ -22,33 +22,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"cablog.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"github","dark":"github-dark-dimmed"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":100,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="获取Xcode从“App Store”可以从”App Store”快速获取稳定版及后续更新  从“Apple Developer官网”可以从Xcode - Apple Developer快速获取Beta版及后续更新  正式创建启动软件 软件类型点击“Create New Project…”来到软件类型选择页面  根据自行需要所需选择 Note当提示“xxx Not Installed”时，应点击后">
+    <meta name="description" content="视图声明文件新项目默认有写好的视图声明文件。 若无则创建，名称必须为软件名+APP 例如下图创建项目时名称为“test”，视图声明文件名称则为“testApp”  导入SwiftUI模块12代码示例import SwiftUI  标记程序入口12代码示例@main  搭建接口先使用Struct以软件名定义一个结构体，APP协议要求实现body属性 再使用var定义body属性，some Scene">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI-首个项目创建">
-<meta property="og:url" content="https://cablog.top/2025/06/03/SwiftUI-%E9%A6%96%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/index.html">
+<meta property="og:title" content="SwiftUI-创建视图">
+<meta property="og:url" content="https://cablog.top/2025/06/22/SwiftUI-%E5%88%9B%E5%BB%BA%E8%A7%86%E5%9B%BE/index.html">
 <meta property="og:site_name" content="Calin&#39;s Blog">
-<meta property="og:description" content="获取Xcode从“App Store”可以从”App Store”快速获取稳定版及后续更新  从“Apple Developer官网”可以从Xcode - Apple Developer快速获取Beta版及后续更新  正式创建启动软件 软件类型点击“Create New Project…”来到软件类型选择页面  根据自行需要所需选择 Note当提示“xxx Not Installed”时，应点击后">
+<meta property="og:description" content="视图声明文件新项目默认有写好的视图声明文件。 若无则创建，名称必须为软件名+APP 例如下图创建项目时名称为“test”，视图声明文件名称则为“testApp”  导入SwiftUI模块12代码示例import SwiftUI  标记程序入口12代码示例@main  搭建接口先使用Struct以软件名定义一个结构体，APP协议要求实现body属性 再使用var定义body属性，some Scene">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cablog.top/img/Xcode%E8%BD%AF%E4%BB%B6%E5%95%86%E5%BA%97%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/XcodeAD%E5%AE%98%E7%BD%91%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/Xcode%E5%90%AF%E5%8A%A8%E9%A6%96%E9%A1%B5%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/Xcode%E8%BD%AF%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/Xcode%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E6%9C%AA%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/Xcode%E6%96%B0%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="article:published_time" content="2025-06-02T23:38:08.100Z">
-<meta property="article:modified_time" content="2025-06-18T18:50:42.238Z">
+<meta property="og:image" content="https://cablog.top/img/%E8%A7%86%E5%9B%BE%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="https://cablog.top/img/%E8%A7%86%E5%9B%BE%E6%96%87%E4%BB%B6%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="https://cablog.top/img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="article:published_time" content="2025-06-22T09:56:13.344Z">
+<meta property="article:modified_time" content="2025-06-22T11:55:31.013Z">
 <meta property="article:author" content="Calin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cablog.top/img/Xcode%E8%BD%AF%E4%BB%B6%E5%95%86%E5%BA%97%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
+<meta name="twitter:image" content="https://cablog.top/img/%E8%A7%86%E5%9B%BE%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E7%A4%BA%E4%BE%8B.PNG">
 
 
-<link rel="canonical" href="https://cablog.top/2025/06/03/SwiftUI-%E9%A6%96%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/">
+<link rel="canonical" href="https://cablog.top/2025/06/22/SwiftUI-%E5%88%9B%E5%BB%BA%E8%A7%86%E5%9B%BE/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://cablog.top/2025/06/03/SwiftUI-%E9%A6%96%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/","path":"2025/06/03/SwiftUI-首个项目创建/","title":"SwiftUI-首个项目创建"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://cablog.top/2025/06/22/SwiftUI-%E5%88%9B%E5%BB%BA%E8%A7%86%E5%9B%BE/","path":"2025/06/22/SwiftUI-创建视图/","title":"SwiftUI-创建视图"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>SwiftUI-首个项目创建 | Calin's Blog</title>
+<title>SwiftUI-创建视图 | Calin's Blog</title>
   
 
 
@@ -140,7 +137,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96Xcode"><span class="nav-number">1.</span> <span class="nav-text">获取Xcode</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E2%80%9CApp-Store%E2%80%9D"><span class="nav-number">1.1.</span> <span class="nav-text">从“App Store”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E2%80%9CApple-Developer%E5%AE%98%E7%BD%91%E2%80%9D"><span class="nav-number">1.2.</span> <span class="nav-text">从“Apple Developer官网”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">正式创建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">启动软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">软件类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">新项目选项</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%86%E5%9B%BE%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">视图声明文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5SwiftUI%E6%A8%A1%E5%9D%97"><span class="nav-number">1.1.</span> <span class="nav-text">导入SwiftUI模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E8%AE%B0%E7%A8%8B%E5%BA%8F%E5%85%A5%E5%8F%A3"><span class="nav-number">1.2.</span> <span class="nav-text">标记程序入口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.3.</span> <span class="nav-text">搭建接口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%86%E5%9B%BE%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">视图文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5SwiftUI%E6%A8%A1%E5%9D%97-1"><span class="nav-number">2.1.</span> <span class="nav-text">导入SwiftUI模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%8E%A5%E5%8F%A3-1"><span class="nav-number">2.2.</span> <span class="nav-text">搭建接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E7%94%BB%E5%B8%83"><span class="nav-number">2.3.</span> <span class="nav-text">显示画布</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,7 +202,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cablog.top/2025/06/03/SwiftUI-%E9%A6%96%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="https://cablog.top/2025/06/22/SwiftUI-%E5%88%9B%E5%BB%BA%E8%A7%86%E5%9B%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/./img/Avatar.JPG">
@@ -218,12 +215,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="SwiftUI-首个项目创建 | Calin's Blog">
+      <meta itemprop="name" content="SwiftUI-创建视图 | Calin's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          SwiftUI-首个项目创建
+          SwiftUI-创建视图
         </h1>
 
         <div class="post-meta-container">
@@ -234,7 +231,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-06-03 07:38:08" itemprop="dateCreated datePublished" datetime="2025-06-03T07:38:08+08:00">2025-06-03</time>
+      <time title="创建时间：2025-06-22 17:56:13" itemprop="dateCreated datePublished" datetime="2025-06-22T17:56:13+08:00">2025-06-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -242,7 +239,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/SwiftUI%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">SwiftUI学习</span></a>
+          <a href="/categories/SwiftIUI%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">SwiftIUI学习</span></a>
         </span>
     </span>
 
@@ -253,14 +250,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>418</span>
+      <span>363</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -270,31 +267,32 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="获取Xcode"><a href="#获取Xcode" class="headerlink" title="获取Xcode"></a>获取Xcode</h1><h2 id="从“App-Store”"><a href="#从“App-Store”" class="headerlink" title="从“App Store”"></a>从“App Store”</h2><p>可以从”App Store”快速获取稳定版及后续更新</p>
-<p><img src="/./img/Xcode%E8%BD%AF%E4%BB%B6%E5%95%86%E5%BA%97%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG" alt="从App Store获取示例"></p>
-<h2 id="从“Apple-Developer官网”"><a href="#从“Apple-Developer官网”" class="headerlink" title="从“Apple Developer官网”"></a>从“Apple Developer官网”</h2><p>可以从<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYXBwbGUuY29tL2NuL3hjb2RlLw==">Xcode - Apple Developer<i class="fa fa-external-link-alt"></i></span>快速获取Beta版及后续更新</p>
-<p><img src="/./img/XcodeAD%E5%AE%98%E7%BD%91%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG" alt="从Apple Developer官网获取示例"></p>
-<h1 id="正式创建"><a href="#正式创建" class="headerlink" title="正式创建"></a>正式创建</h1><h2 id="启动软件"><a href="#启动软件" class="headerlink" title="启动软件"></a>启动软件</h2><p><img src="/./img/Xcode%E5%90%AF%E5%8A%A8%E9%A6%96%E9%A1%B5%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode启动首页示例"></p>
-<h2 id="软件类型"><a href="#软件类型" class="headerlink" title="软件类型"></a>软件类型</h2><p>点击“Create New Project…”来到软件类型选择页面</p>
-<p><img src="/./img/Xcode%E8%BD%AF%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode软件类型选择页面示例"></p>
-<p>根据自行需要所需选择</p>
-<div class="note info"><p>Note<br>当提示“xxx Not Installed”时，应点击后方“Get”以获取构建版本支持</p>
-<p><img src="/./img/Xcode%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E6%9C%AA%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode构建版本未安装示例"></p>
-</div>
+    <div class="post-body" itemprop="articleBody"><h1 id="视图声明文件"><a href="#视图声明文件" class="headerlink" title="视图声明文件"></a>视图声明文件</h1><p>新项目默认有写好的视图声明文件。</p>
+<p>若无则创建，名称必须为软件名+APP</p>
+<p>例如下图创建项目时名称为“test”，视图声明文件名称则为“testApp”</p>
+<p><img src="/./img/%E8%A7%86%E5%9B%BE%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E7%A4%BA%E4%BE%8B.PNG" alt="视图声明文件示例"></p>
+<h2 id="导入SwiftUI模块"><a href="#导入SwiftUI模块" class="headerlink" title="导入SwiftUI模块"></a>导入SwiftUI模块</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="keyword">import</span> SwiftUI</span><br></pre></td></tr></table></figure>
 
-<h2 id="新项目选项"><a href="#新项目选项" class="headerlink" title="新项目选项"></a>新项目选项</h2><p>选择好软件类型点击“Next”来到新项目选项页面</p>
-<p><img src="/./img/Xcode%E6%96%B0%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode新项目选项页面示例"></p>
-<p>Product Name<br><sub>产品名称。将应用于软件开启后菜单栏显示、鼠标停滞图标显示及软件窗口顶部</sub></p>
-<p>Team<br><sub>团队。用于团队合作时项目共享，后续软件上架“App Store”须添加</sub></p>
-<p>Organization Identifier<br><sub>组织标识。团队或公司名称</sub></p>
-<p>Bundle Identifier<br><sub>捆绑标识。软件包名，前段为组织标识</sub></p>
-<p>Interface<br><sub>接口。本次选择”SwiftUI”</sub></p>
-<p>Language<br><sub>语言。接口选择”SwiftUI”后，默认使用”Swift”</sub></p>
-<p>Testing System<br><sub>测试系统。用于操作反馈，代码单元测试及集成测试。本次选择“Swift Testing with XCTest UI Tests”</sub></p>
-<p>Storage<br><sub>存储。用于数据持久化，将对象转为为数据存储，后续可还原</sub></p>
-<p>Host in CloudKit<br><sub>云端主机。使用iCloud作为云端数据库，可用于跨平台同步</sub></p>
-<div class="note info"><p>Note<br>标准的“Organization Identifier”写法</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#xxx为组织名称</span><br><span class="line">com.xxx</span><br></pre></td></tr></table></figure></div>
+<h2 id="标记程序入口"><a href="#标记程序入口" class="headerlink" title="标记程序入口"></a>标记程序入口</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="meta">@main</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="搭建接口"><a href="#搭建接口" class="headerlink" title="搭建接口"></a>搭建接口</h2><p>先使用Struct以软件名定义一个结构体，APP协议要求实现body属性</p>
+<p>再使用var定义body属性，some Scene协议要求实现场景</p>
+<p>WindowGroup为场景类型，用于管理视图，最后用它定义视图（可多个）</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="string">#&quot;testApp&quot;需与视图声明文件名称一致，&quot;ContentView&quot;为视图名称</span></span><br><span class="line"><span class="string">struct testAPp: App &#123;</span></span><br><span class="line"><span class="string">    var body: some Scene &#123;</span></span><br><span class="line"><span class="string">        WindowGroup &#123;</span></span><br><span class="line"><span class="string">            ContentView()</span></span><br><span class="line"><span class="string">            #ContentView2()</span></span><br><span class="line"><span class="string">            #ContentView3()</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="视图文件"><a href="#视图文件" class="headerlink" title="视图文件"></a>视图文件</h1><p>新项目默认有写好的视图文件与视图声明文件配合。</p>
+<p>若无则创建，名称必须与视图声明文件内WindowGroup下定义的一致</p>
+<p><img src="/./img/%E8%A7%86%E5%9B%BE%E6%96%87%E4%BB%B6%E7%A4%BA%E4%BE%8B.PNG" alt="视图文件示例"></p>
+<h2 id="导入SwiftUI模块-1"><a href="#导入SwiftUI模块-1" class="headerlink" title="导入SwiftUI模块"></a>导入SwiftUI模块</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="keyword">import</span> SwiftUI</span><br></pre></td></tr></table></figure>
+
+<h2 id="搭建接口-1"><a href="#搭建接口-1" class="headerlink" title="搭建接口"></a>搭建接口</h2><p>先使用Struct以视图名定义一个结构体，View协议要求实现body属性</p>
+<p>再使用var定义body属性，some View协议要求实现视图</p>
+<p>可在其下定义文本、图片、链接，后续会介绍</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">ContentView</span>: <span class="title class_ inherited__">View</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="显示画布"><a href="#显示画布" class="headerlink" title="显示画布"></a>显示画布</h2><p>便于实时预览内容更改</p>
+<p><img src="/./img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B.PNG" alt="画布示例"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">Preview</span> &#123;</span><br><span class="line">    <span class="type">ContentView</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -311,7 +309,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://cablog.top/2025/06/03/SwiftUI-%E9%A6%96%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/" title="SwiftUI-首个项目创建">https://cablog.top/2025/06/03/SwiftUI-首个项目创建/</a>
+      <a href="https://cablog.top/2025/06/22/SwiftUI-%E5%88%9B%E5%BB%BA%E8%A7%86%E5%9B%BE/" title="SwiftUI-创建视图">https://cablog.top/2025/06/22/SwiftUI-创建视图/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
