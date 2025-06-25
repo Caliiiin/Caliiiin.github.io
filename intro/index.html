@@ -292,7 +292,7 @@
 
 <p>系统默认以窗口内最大组件尺寸为窗口最小缩放尺寸，下面的步骤可省略，但为了规范可以添上</p>
 <p>在<strong>WindowGroup</strong>下方书写.<strong>windowResizability</strong></p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(maxWidth: .infinity, maxHeight: .infinity)</span><br><span class="line">        &#125;</span><br><span class="line">        .windowResizability(.automatic)				<span class="comment">//可用.contentSize替换.automatic</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(maxWidth: .infinity, maxHeight: .infinity)</span><br><span class="line">        &#125;</span><br><span class="line">        .windowResizability(.automatic)<span class="comment">//可用.contentSize替换.automatic</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/./img/%E6%97%A0%E9%99%90%E5%88%B6%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B.PNG" alt="无限制尺寸示例"></p>
 <p>写完以上，窗口可以实现全屏最大化、最大程度缩小（非最小化至Dock栏）</p>
@@ -310,7 +310,7 @@
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(minWidth: <span class="number">400</span>, minHeight: <span class="number">400</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
 <p>在<strong>WindowGroup</strong>下方书写.<strong>windowResizability</strong></p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(minWidth: <span class="number">400</span>, minHeight: <span class="number">400</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        .windowResizability(.contentMinSize)				<span class="comment">//可用.automatic替代.contentMinSize</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(minWidth: <span class="number">400</span>, minHeight: <span class="number">400</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        .windowResizability(.contentMinSize)<span class="comment">//可用.automatic替代.contentMinSize</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="/./img/%E9%99%90%E5%88%B6%E6%9C%80%E5%B0%8F%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B.PNG" alt="限制最大尺寸示例"></p>
 <p>写完以上，可以实现窗口全屏最大化，屏蔽最大程度缩小（非最小化至Dock栏）</p>
@@ -558,7 +558,7 @@
 </div>
 
 <h1 id="声明文件"><a href="#声明文件" class="headerlink" title="声明文件"></a>声明文件</h1><p>新项目默认有写好的声明文件。</p>
-<p>若无则创建，名称必须为**“软件名+App”**</p>
+<p>若无则创建，名称必须为<strong>软件名+App</strong></p>
 <p>例如下图创建项目时名称为<strong>test</strong>，声明文件名称则为<strong>testApp</strong></p>
 <p><img src="/./img/%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E7%A4%BA%E4%BE%8B.PNG" alt="视图声明文件示例"></p>
 <div class="note success"><p>Tip<br><strong>视图与窗口的关系</strong></p>
