@@ -22,39 +22,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"cablog.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"github","dark":"github-dark-dimmed"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":100,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="大致感受代码区域与画布区域的联系       上一篇     下一篇     画布预览模式 红框部分为画布，可实时显示对视图的更改及定位组件代码 Live&#x2F;实时模式 仅显示代码区域对视图的更改 Selectable&#x2F;选择模式 当选择视图板块时，将在代码区域定位，如下图  Variants&#x2F;变体模式 由系统提供的亮色主题与深色主题预览 Tip在下图红框部分设置以在其他模">
+    <meta name="description" content="视图的大小往往决定App窗口大小。把视图比作一个西瓜放进包里，西瓜越大，包就被撑的越大。相同的，把组件比作西瓜籽，西瓜越大，其内的西瓜籽也就越多。所以有必要调整好视图窗口  上一篇  固定尺寸使用**.frame**设定宽高值 在视图声明文件里已定义的视图下方书写 12345代码示例WindowGroup &#123;            ContentView()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI-为视图添加组件">
-<meta property="og:url" content="https://cablog.top/2025/06/23/SwiftUI-%E4%B8%BA%E8%A7%86%E5%9B%BE%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/index.html">
+<meta property="og:title" content="SwiftUI-调整视图窗口">
+<meta property="og:url" content="https://cablog.top/2025/06/25/SwiftUI-%E8%B0%83%E6%95%B4%E8%A7%86%E5%9B%BE%E7%AA%97%E5%8F%A3/index.html">
 <meta property="og:site_name" content="Calin&#39;s Blog">
-<meta property="og:description" content="大致感受代码区域与画布区域的联系       上一篇     下一篇     画布预览模式 红框部分为画布，可实时显示对视图的更改及定位组件代码 Live&#x2F;实时模式 仅显示代码区域对视图的更改 Selectable&#x2F;选择模式 当选择视图板块时，将在代码区域定位，如下图  Variants&#x2F;变体模式 由系统提供的亮色主题与深色主题预览 Tip在下图红框部分设置以在其他模">
+<meta property="og:description" content="视图的大小往往决定App窗口大小。把视图比作一个西瓜放进包里，西瓜越大，包就被撑的越大。相同的，把组件比作西瓜籽，西瓜越大，其内的西瓜籽也就越多。所以有必要调整好视图窗口  上一篇  固定尺寸使用**.frame**设定宽高值 在视图声明文件里已定义的视图下方书写 12345代码示例WindowGroup &#123;            ContentView()">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cablog.top/img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B2.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E5%AE%9E%E6%97%B6%E6%A8%A1%E5%BC%8F%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E9%80%89%E6%8B%A9%E6%A8%A1%E5%BC%8F%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E7%94%BB%E5%B8%83%E5%AE%9A%E4%BD%8D%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E5%8F%98%E4%BD%93%E6%A8%A1%E5%BC%8F%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E7%94%BB%E5%B8%83%E8%AE%BE%E5%A4%87%E8%AE%BE%E7%BD%AE%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E6%96%87%E6%9C%AC%E6%8F%92%E5%85%A5%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E6%8D%A2%E8%A1%8C%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E7%BB%84%E4%BB%B6%E5%BA%93%E8%8F%9C%E5%8D%95%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E6%8C%89%E9%92%AE%E6%8F%92%E5%85%A5%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E9%80%89%E4%B8%AD%E4%BB%A3%E7%A0%81%E8%A1%8C%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="og:image" content="https://cablog.top/img/%E5%AD%97%E4%BD%93%E6%9B%B4%E6%94%B9%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="article:published_time" content="2025-06-23T05:28:52.000Z">
-<meta property="article:modified_time" content="2025-06-25T11:17:27.990Z">
+<meta property="og:image" content="https://cablog.top/img/%E5%9B%BA%E5%AE%9A%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B1.PNG">
+<meta property="og:image" content="https://cablog.top/img/%E5%9B%BA%E5%AE%9A%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B2.PNG">
+<meta property="og:image" content="https://cablog.top/img/%E9%99%90%E5%88%B6%E6%9C%80%E5%A4%A7%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="og:image" content="https://cablog.top/img/%E9%99%90%E5%88%B6%E6%9C%80%E5%B0%8F%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B.PNG">
+<meta property="article:published_time" content="2025-06-24T17:09:41.000Z">
+<meta property="article:modified_time" content="2025-06-25T10:48:50.250Z">
 <meta property="article:author" content="Calin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cablog.top/img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B2.PNG">
+<meta name="twitter:image" content="https://cablog.top/img/%E5%9B%BA%E5%AE%9A%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B1.PNG">
 
 
-<link rel="canonical" href="https://cablog.top/2025/06/23/SwiftUI-%E4%B8%BA%E8%A7%86%E5%9B%BE%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/">
+<link rel="canonical" href="https://cablog.top/2025/06/25/SwiftUI-%E8%B0%83%E6%95%B4%E8%A7%86%E5%9B%BE%E7%AA%97%E5%8F%A3/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://cablog.top/2025/06/23/SwiftUI-%E4%B8%BA%E8%A7%86%E5%9B%BE%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/","path":"2025/06/23/SwiftUI-为视图添加组件/","title":"SwiftUI-为视图添加组件"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://cablog.top/2025/06/25/SwiftUI-%E8%B0%83%E6%95%B4%E8%A7%86%E5%9B%BE%E7%AA%97%E5%8F%A3/","path":"2025/06/25/SwiftUI-调整视图窗口/","title":"SwiftUI-调整视图窗口"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>SwiftUI-为视图添加组件 | Calin's Blog</title>
+<title>SwiftUI-调整视图窗口 | Calin's Blog</title>
   
 
 
@@ -146,7 +138,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%BB%E5%B8%83%E9%A2%84%E8%A7%88%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">画布预览模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Live-%E5%AE%9E%E6%97%B6%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">Live&#x2F;实时模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selectable-%E9%80%89%E6%8B%A9%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">Selectable&#x2F;选择模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Variants-%E5%8F%98%E4%BD%93%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">Variants&#x2F;变体模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">添加组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F%E8%BE%93%E5%85%A5"><span class="nav-number">2.1.</span> <span class="nav-text">代码区域输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E7%BB%84%E4%BB%B6%E5%BA%93"><span class="nav-number">2.2.</span> <span class="nav-text">快捷组件库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E7%BB%84%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">调整组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Font-%E5%AD%97%E4%BD%93"><span class="nav-number">3.1.</span> <span class="nav-text">Font&#x2F;字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Padding-%E5%A1%AB%E5%85%85"><span class="nav-number">3.2.</span> <span class="nav-text">Padding&#x2F;填充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Frame-%E6%A1%86%E6%9E%B6"><span class="nav-number">3.3.</span> <span class="nav-text">Frame&#x2F;框架</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BA%E5%AE%9A%E5%B0%BA%E5%AF%B8"><span class="nav-number">1.</span> <span class="nav-text">固定尺寸</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8C%83%E5%9B%B4%E9%99%90%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">范围限制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%90%E5%88%B6%E6%9C%80%E5%A4%A7%E5%B0%BA%E5%AF%B8"><span class="nav-number">2.1.</span> <span class="nav-text">限制最大尺寸</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%90%E5%88%B6%E6%9C%80%E5%B0%8F%E5%B0%BA%E5%AF%B8"><span class="nav-number">2.2.</span> <span class="nav-text">限制最小尺寸</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -211,7 +203,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cablog.top/2025/06/23/SwiftUI-%E4%B8%BA%E8%A7%86%E5%9B%BE%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="https://cablog.top/2025/06/25/SwiftUI-%E8%B0%83%E6%95%B4%E8%A7%86%E5%9B%BE%E7%AA%97%E5%8F%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/./img/Avatar.JPG">
@@ -224,12 +216,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="SwiftUI-为视图添加组件 | Calin's Blog">
+      <meta itemprop="name" content="SwiftUI-调整视图窗口 | Calin's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          SwiftUI-为视图添加组件
+          SwiftUI-调整视图窗口
         </h1>
 
         <div class="post-meta-container">
@@ -240,7 +232,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-06-23 13:28:52" itemprop="dateCreated datePublished" datetime="2025-06-23T13:28:52+08:00">2025-06-23</time>
+      <time title="创建时间：2025-06-25 01:09:41" itemprop="dateCreated datePublished" datetime="2025-06-25T01:09:41+08:00">2025-06-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,14 +251,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>619</span>
+      <span>890</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -276,56 +268,48 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><center>大致感受代码区域与画布区域的联系</center>
+    <div class="post-body" itemprop="articleBody"><center>视图的大小往往决定App窗口大小。把视图比作一个西瓜放进包里，西瓜越大，包就被撑的越大。相同的，把组件比作西瓜籽，西瓜越大，其内的西瓜籽也就越多。所以有必要调整好视图窗口</center>
 
-<div style="display: flex; justify-content: space-between;">
-    <div><a class="btn" href="https://cablog.top/2025/06/22/SwiftUI-创建视图窗口/">上一篇</a></div>
-    <div><a class="btn" href="https://cablog.top/2025/06/25/SwiftUI-调整视图窗口/">下一篇</a></div>
+<a class="btn" href="https://cablog.top/2025/06/23/SwiftUI-为视图添加组件/">上一篇</a>
+
+<h1 id="固定尺寸"><a href="#固定尺寸" class="headerlink" title="固定尺寸"></a>固定尺寸</h1><p>使用**.frame**设定宽高值</p>
+<p>在视图声明文件里已定义的视图下方书写</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(width: <span class="number">300</span>, height: <span class="number">300</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./img/%E5%9B%BA%E5%AE%9A%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B1.PNG" alt="固定尺寸示例"></p>
+<p>这样书写后窗口依旧是可缩放的，还需要使用**.windowResizability**设定缩放规则</p>
+<p>在<strong>WindowGroup</strong>下方书写**.windowResizability**</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(width: <span class="number">300</span>, height: <span class="number">300</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        .windowResizability(.contentSize)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./img/%E5%9B%BA%E5%AE%9A%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B2.PNG" alt="无限制尺寸示例"></p>
+<p>写完以上，窗口最大化图标变灰且实现屏蔽缩放</p>
+<div class="note info"><p>Note</p>
+<p><strong>.windowResizability</strong>的三种规则</p>
+<p><sub><strong>.contentSize</strong></sub><br><sub>内容大小。以定义的视图尺寸设定窗口可调节大小。若组件尺寸大于视图，则会按照组件尺寸固定，但通常组件小于视图。通常用于不可调窗口或范围可调窗口（一般仅限制最小尺寸而不限制最大尺寸，这是特例）</sub></p>
+<p><sub><strong>.contentMinSize</strong></sub><br><sub>最小内容尺寸。以定义的视图最小尺寸设定窗口可调节最小尺寸。需要提前定义视图的最小尺寸。通常用于</sub></p>
+<p><sub><strong>.automatic</strong></sub><br><sub>自动。相当于自动实现**.contentSize<strong>和</strong>.contentMinSize**的功能。建议写具体规则，避免混乱</sub></p>
 </div>
 
-</br>
-
-<h1 id="画布预览模式"><a href="#画布预览模式" class="headerlink" title="画布预览模式"></a>画布预览模式</h1><p><img src="/./img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B2.PNG" alt="画布示例"></p>
-<p><font color="EA4025">红框</font>部分为画布，可实时显示对视图的更改及定位组件代码</p>
-<h2 id="Live-实时模式"><a href="#Live-实时模式" class="headerlink" title="Live&#x2F;实时模式"></a>Live&#x2F;实时模式</h2><p><img src="/./img/%E5%AE%9E%E6%97%B6%E6%A8%A1%E5%BC%8F%E7%A4%BA%E4%BE%8B.PNG" alt="实时模式示例"></p>
-<p>仅显示代码区域对视图的更改</p>
-<h2 id="Selectable-选择模式"><a href="#Selectable-选择模式" class="headerlink" title="Selectable&#x2F;选择模式"></a>Selectable&#x2F;选择模式</h2><p><img src="/./img/%E9%80%89%E6%8B%A9%E6%A8%A1%E5%BC%8F%E7%A4%BA%E4%BE%8B.PNG" alt="选择模式示例"></p>
-<p>当选择视图板块时，将在代码区域定位，如下图</p>
-<p><img src="/./img/%E7%94%BB%E5%B8%83%E5%AE%9A%E4%BD%8D%E7%A4%BA%E4%BE%8B.PNG" alt="画布定位示例"></p>
-<h2 id="Variants-变体模式"><a href="#Variants-变体模式" class="headerlink" title="Variants&#x2F;变体模式"></a>Variants&#x2F;变体模式</h2><p><img src="/./img/%E5%8F%98%E4%BD%93%E6%A8%A1%E5%BC%8F%E7%A4%BA%E4%BE%8B.PNG" alt="变体模式示例"></p>
-<p>由系统提供的亮色主题与深色主题预览</p>
-<div class="note success"><p>Tip<br>在下图<font color="EA4025">红框</font>部分设置以在其他模式预览深色主题</p>
-<p><img src="/./img/%E7%94%BB%E5%B8%83%E8%AE%BE%E5%A4%87%E8%AE%BE%E7%BD%AE%E7%A4%BA%E4%BE%8B.PNG" alt="画布设备设置示例"></p>
-</div>
 
 
+<h1 id="范围限制"><a href="#范围限制" class="headerlink" title="范围限制"></a>范围限制</h1><h2 id="限制最大尺寸"><a href="#限制最大尺寸" class="headerlink" title="限制最大尺寸"></a>限制最大尺寸</h2><p>使用**.frame**设定宽高值</p>
+<p>在视图声明文件里已定义的视图下方书写</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(maxWidth: <span class="number">400</span>, maxHeight: <span class="number">400</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
+<p>在<strong>WindowGroup</strong>下方书写**.windowResizability**</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(maxWidth: <span class="number">400</span>, maxHeight: <span class="number">400</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        .windowResizability(.contentSize)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="添加组件"><a href="#添加组件" class="headerlink" title="添加组件"></a>添加组件</h1><h2 id="代码区域输入"><a href="#代码区域输入" class="headerlink" title="代码区域输入"></a>代码区域输入</h2><p>例如在视图内插入一行文本，在<strong>body</strong>下书写</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line">struct ContentView: View &#123;</span><br><span class="line">    var body: some View &#123;</span><br><span class="line">            Text(&quot;Hello, world!&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/./img/%E9%99%90%E5%88%B6%E6%9C%80%E5%A4%A7%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B.PNG" alt="限制最大尺寸示例"></p>
+<p>写完以上，可以屏蔽窗口全屏最大化，实现最大程度缩小（非最小化至Dock栏）</p>
+<h2 id="限制最小尺寸"><a href="#限制最小尺寸" class="headerlink" title="限制最小尺寸"></a>限制最小尺寸</h2><p>使用**.frame**设定宽高值</p>
+<p>在视图声明文件里已定义的视图下方书写</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(minWidth: <span class="number">400</span>, minHeight: <span class="number">400</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/./img/%E6%96%87%E6%9C%AC%E6%8F%92%E5%85%A5%E7%A4%BA%E4%BE%8B.PNG" alt="文本插入示例"></p>
-<h2 id="快捷组件库"><a href="#快捷组件库" class="headerlink" title="快捷组件库"></a>快捷组件库</h2><p>例如在刚刚创建的文本下方插入一个按钮</p>
-<p>首先换行至“文本”下方</p>
-<p><img src="/./img/%E6%8D%A2%E8%A1%8C%E7%A4%BA%E4%BE%8B.PNG" alt="换行示例"></p>
-<p>点击上图<font color="EA4025">红框</font>部分，或 <strong>control+shift+command</strong> 调出组件库菜单</p>
-<p><img src="/./img/%E7%BB%84%E4%BB%B6%E5%BA%93%E8%8F%9C%E5%8D%95%E7%A4%BA%E4%BE%8B.PNG" alt="组件库菜单示例"></p>
-<p>选中“按钮”后回车</p>
-<p><img src="/./img/%E6%8C%89%E9%92%AE%E6%8F%92%E5%85%A5%E7%A4%BA%E4%BE%8B.PNG" alt="按钮插入示例"></p>
-<h1 id="调整组件"><a href="#调整组件" class="headerlink" title="调整组件"></a>调整组件</h1><p>例如选中文本组件对应的代码行，对其检查，<font color="EA4025">红框</font>部分为选中组件的属性</p>
-<p><img src="/./img/%E9%80%89%E4%B8%AD%E4%BB%A3%E7%A0%81%E8%A1%8C%E7%A4%BA%E4%BE%8B.PNG" alt="选中代码行示例"></p>
-<p>在检查器更改属性后将会在组件代码下方添加属性代码</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="comment">//例如设置font为标题样式</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">ContentView</span>: <span class="title class_ inherited__">View</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span> &#123;</span><br><span class="line">        <span class="type">Text</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line">            .font(.title)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<strong>WindowGroup</strong>下方书写**.windowResizability**</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()</span><br><span class="line">                .frame(minWidth: <span class="number">400</span>, minHeight: <span class="number">400</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        .windowResizability(.contentMinSize)				<span class="comment">//可用.automatic替代.contentMinSize</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/./img/%E5%AD%97%E4%BD%93%E6%9B%B4%E6%94%B9%E7%A4%BA%E4%BE%8B.PNG" alt="字体更改示例"></p>
-<p>每个组件有不同的属性，以下介绍几个常见修饰属性</p>
-<h2 id="Font-字体"><a href="#Font-字体" class="headerlink" title="Font&#x2F;字体"></a>Font&#x2F;字体</h2><p><strong>Font</strong><br><sub>字体。本意强调文本的大小样式</sub></p>
-<p><strong>Weight</strong><br><sub>重量。本意强调文本的粗细及颜色深浅给予视觉的重量感</sub></p>
-<p><strong>Color</strong><br><sub>颜色。赋予文本颜色</sub></p>
-<p><strong>Alignment</strong><br><sub>排列。使文本“左对齐”或“居中对齐”或“右对齐”</sub></p>
-<p><strong>Line Limit</strong><br><sub>行限制。将长文本限制于规定行数内。需搭配.Frame使用</sub></p>
-<h2 id="Padding-填充"><a href="#Padding-填充" class="headerlink" title="Padding&#x2F;填充"></a>Padding&#x2F;填充</h2><p>即在组件填充空白，使其位于视图某个位置</p>
-<h2 id="Frame-框架"><a href="#Frame-框架" class="headerlink" title="Frame&#x2F;框架"></a>Frame&#x2F;框架</h2><p>设置宽度与高度以限制组件的大小</p>
+<p><img src="/./img/%E9%99%90%E5%88%B6%E6%9C%80%E5%B0%8F%E5%B0%BA%E5%AF%B8%E7%A4%BA%E4%BE%8B.PNG" alt="限制最大尺寸示例"></p>
+<p>写完以上，可以实现窗口全屏最大化，屏蔽最大程度缩小（非最小化至Dock栏）</p>
 
     </div>
 
@@ -343,7 +327,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://cablog.top/2025/06/23/SwiftUI-%E4%B8%BA%E8%A7%86%E5%9B%BE%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/" title="SwiftUI-为视图添加组件">https://cablog.top/2025/06/23/SwiftUI-为视图添加组件/</a>
+      <a href="https://cablog.top/2025/06/25/SwiftUI-%E8%B0%83%E6%95%B4%E8%A7%86%E5%9B%BE%E7%AA%97%E5%8F%A3/" title="SwiftUI-调整视图窗口">https://cablog.top/2025/06/25/SwiftUI-调整视图窗口/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
