@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"cablog.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"github","dark":"github-dark-dimmed"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":100,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="大致感受代码区域与画布区域的联系       上一篇     下一篇     画布预览模式 红框部分为画布，可实时显示对视图的更改及定位组件代码 Live&#x2F;实时模式 仅显示代码区域对视图的更改 Selectable&#x2F;选择模式 当选择视图板块时，将在代码区域定位，如下图  Variants&#x2F;变体模式 由系统提供的亮色主题与深色主题预览 Tip在下图红框部分设置以在其他模">
+    <meta name="description" content="大致感受代码区域与画布区域的联系         上一篇     下一篇   画布预览模式 红框部分为画布，可实时显示对视图的更改及定位组件代码 Live&#x2F;实时模式 仅显示代码区域对视图的更改 Selectable&#x2F;选择模式 当选择视图板块时，将在代码区域定位，如下图  Variants&#x2F;变体模式 由系统提供的亮色主题与深色主题预览 Tip在下图红框部分设置以在其他模">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI-为视图添加组件">
 <meta property="og:url" content="https://cablog.top/2025/06/23/SwiftUI-%E4%B8%BA%E8%A7%86%E5%9B%BE%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Calin&#39;s Blog">
-<meta property="og:description" content="大致感受代码区域与画布区域的联系       上一篇     下一篇     画布预览模式 红框部分为画布，可实时显示对视图的更改及定位组件代码 Live&#x2F;实时模式 仅显示代码区域对视图的更改 Selectable&#x2F;选择模式 当选择视图板块时，将在代码区域定位，如下图  Variants&#x2F;变体模式 由系统提供的亮色主题与深色主题预览 Tip在下图红框部分设置以在其他模">
+<meta property="og:description" content="大致感受代码区域与画布区域的联系         上一篇     下一篇   画布预览模式 红框部分为画布，可实时显示对视图的更改及定位组件代码 Live&#x2F;实时模式 仅显示代码区域对视图的更改 Selectable&#x2F;选择模式 当选择视图板块时，将在代码区域定位，如下图  Variants&#x2F;变体模式 由系统提供的亮色主题与深色主题预览 Tip在下图红框部分设置以在其他模">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cablog.top/img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B2.PNG">
 <meta property="og:image" content="https://cablog.top/img/%E5%AE%9E%E6%97%B6%E6%A8%A1%E5%BC%8F%E7%A4%BA%E4%BE%8B.PNG">
@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://cablog.top/img/%E9%80%89%E4%B8%AD%E4%BB%A3%E7%A0%81%E8%A1%8C%E7%A4%BA%E4%BE%8B.PNG">
 <meta property="og:image" content="https://cablog.top/img/%E5%AD%97%E4%BD%93%E6%9B%B4%E6%94%B9%E7%A4%BA%E4%BE%8B.PNG">
 <meta property="article:published_time" content="2025-06-23T05:28:52.000Z">
-<meta property="article:modified_time" content="2025-06-25T11:17:27.990Z">
+<meta property="article:modified_time" content="2025-06-25T11:46:50.370Z">
 <meta property="article:author" content="Calin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cablog.top/img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B2.PNG">
@@ -278,12 +278,12 @@
     
     <div class="post-body" itemprop="articleBody"><center>大致感受代码区域与画布区域的联系</center>
 
+</br>
+
 <div style="display: flex; justify-content: space-between;">
     <div><a class="btn" href="https://cablog.top/2025/06/22/SwiftUI-创建视图窗口/">上一篇</a></div>
     <div><a class="btn" href="https://cablog.top/2025/06/25/SwiftUI-调整视图窗口/">下一篇</a></div>
 </div>
-
-</br>
 
 <h1 id="画布预览模式"><a href="#画布预览模式" class="headerlink" title="画布预览模式"></a>画布预览模式</h1><p><img src="/./img/%E7%94%BB%E5%B8%83%E7%A4%BA%E4%BE%8B2.PNG" alt="画布示例"></p>
 <p><font color="EA4025">红框</font>部分为画布，可实时显示对视图的更改及定位组件代码</p>
