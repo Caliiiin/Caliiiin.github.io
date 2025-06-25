@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"cablog.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"github","dark":"github-dark-dimmed"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":100,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="获取Xcode从“App Store”可以从”App Store”快速获取稳定版及后续更新  从“Apple Developer官网”可以从Xcode - Apple Developer快速获取Beta版及后续更新  正式创建启动软件 软件类型点击“Create New Project…”来到软件类型选择页面  根据自行需要所需选择 Note当提示“xxx Not Installed”时，应点击后">
+    <meta name="description" content="1.获取Xcode1.1 从“App Store”可以从”App Store”快速获取稳定版及后续更新  1.2 从“Apple Developer官网”可以从Xcode - Apple Developer快速获取Beta版及后续更新  2.正式创建2.1 启动软件 2.2 软件类型点击“Create New Project…”来到软件类型选择页面*  根据自行需要所需选择 Note当提示“xxx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI-首个项目创建">
 <meta property="og:url" content="https://cablog.top/2025/06/03/SwiftUI-%E9%A6%96%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/index.html">
 <meta property="og:site_name" content="Calin&#39;s Blog">
-<meta property="og:description" content="获取Xcode从“App Store”可以从”App Store”快速获取稳定版及后续更新  从“Apple Developer官网”可以从Xcode - Apple Developer快速获取Beta版及后续更新  正式创建启动软件 软件类型点击“Create New Project…”来到软件类型选择页面  根据自行需要所需选择 Note当提示“xxx Not Installed”时，应点击后">
+<meta property="og:description" content="1.获取Xcode1.1 从“App Store”可以从”App Store”快速获取稳定版及后续更新  1.2 从“Apple Developer官网”可以从Xcode - Apple Developer快速获取Beta版及后续更新  2.正式创建2.1 启动软件 2.2 软件类型点击“Create New Project…”来到软件类型选择页面*  根据自行需要所需选择 Note当提示“xxx">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cablog.top/img/Xcode%E8%BD%AF%E4%BB%B6%E5%95%86%E5%BA%97%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
 <meta property="og:image" content="https://cablog.top/img/XcodeAD%E5%AE%98%E7%BD%91%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
@@ -35,8 +35,8 @@
 <meta property="og:image" content="https://cablog.top/img/Xcode%E8%BD%AF%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG">
 <meta property="og:image" content="https://cablog.top/img/Xcode%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E6%9C%AA%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
 <meta property="og:image" content="https://cablog.top/img/Xcode%E6%96%B0%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG">
-<meta property="article:published_time" content="2025-06-02T23:38:08.100Z">
-<meta property="article:modified_time" content="2025-06-18T18:50:42.238Z">
+<meta property="article:published_time" content="2025-06-02T23:38:08.000Z">
+<meta property="article:modified_time" content="2025-06-25T06:28:08.710Z">
 <meta property="article:author" content="Calin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cablog.top/img/Xcode%E8%BD%AF%E4%BB%B6%E5%95%86%E5%BA%97%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG">
@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96Xcode"><span class="nav-number">1.</span> <span class="nav-text">获取Xcode</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E2%80%9CApp-Store%E2%80%9D"><span class="nav-number">1.1.</span> <span class="nav-text">从“App Store”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E2%80%9CApple-Developer%E5%AE%98%E7%BD%91%E2%80%9D"><span class="nav-number">1.2.</span> <span class="nav-text">从“Apple Developer官网”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">正式创建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">启动软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">软件类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">新项目选项</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%8E%B7%E5%8F%96Xcode"><span class="nav-number">1.</span> <span class="nav-text">1.获取Xcode</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BB%8E%E2%80%9CApp-Store%E2%80%9D"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 从“App Store”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E4%BB%8E%E2%80%9CApple-Developer%E5%AE%98%E7%BD%91%E2%80%9D"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 从“Apple Developer官网”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%AD%A3%E5%BC%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">2.正式创建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 启动软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E8%BD%AF%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 软件类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E6%96%B0%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 新项目选项</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -253,7 +253,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>418</span>
+      <span>425</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -270,30 +270,30 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="获取Xcode"><a href="#获取Xcode" class="headerlink" title="获取Xcode"></a>获取Xcode</h1><h2 id="从“App-Store”"><a href="#从“App-Store”" class="headerlink" title="从“App Store”"></a>从“App Store”</h2><p>可以从”App Store”快速获取稳定版及后续更新</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="1-获取Xcode"><a href="#1-获取Xcode" class="headerlink" title="1.获取Xcode"></a>1.获取Xcode</h1><h2 id="1-1-从“App-Store”"><a href="#1-1-从“App-Store”" class="headerlink" title="1.1 从“App Store”"></a>1.1 从“App Store”</h2><p>可以从”App Store”快速获取稳定版及后续更新</p>
 <p><img src="/./img/Xcode%E8%BD%AF%E4%BB%B6%E5%95%86%E5%BA%97%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG" alt="从App Store获取示例"></p>
-<h2 id="从“Apple-Developer官网”"><a href="#从“Apple-Developer官网”" class="headerlink" title="从“Apple Developer官网”"></a>从“Apple Developer官网”</h2><p>可以从<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYXBwbGUuY29tL2NuL3hjb2RlLw==">Xcode - Apple Developer<i class="fa fa-external-link-alt"></i></span>快速获取Beta版及后续更新</p>
+<h2 id="1-2-从“Apple-Developer官网”"><a href="#1-2-从“Apple-Developer官网”" class="headerlink" title="1.2 从“Apple Developer官网”"></a>1.2 从“Apple Developer官网”</h2><p>可以从<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYXBwbGUuY29tL2NuL3hjb2RlLw==">Xcode - Apple Developer<i class="fa fa-external-link-alt"></i></span>快速获取Beta版及后续更新</p>
 <p><img src="/./img/XcodeAD%E5%AE%98%E7%BD%91%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG" alt="从Apple Developer官网获取示例"></p>
-<h1 id="正式创建"><a href="#正式创建" class="headerlink" title="正式创建"></a>正式创建</h1><h2 id="启动软件"><a href="#启动软件" class="headerlink" title="启动软件"></a>启动软件</h2><p><img src="/./img/Xcode%E5%90%AF%E5%8A%A8%E9%A6%96%E9%A1%B5%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode启动首页示例"></p>
-<h2 id="软件类型"><a href="#软件类型" class="headerlink" title="软件类型"></a>软件类型</h2><p>点击“Create New Project…”来到软件类型选择页面</p>
+<h1 id="2-正式创建"><a href="#2-正式创建" class="headerlink" title="2.正式创建"></a>2.正式创建</h1><h2 id="2-1-启动软件"><a href="#2-1-启动软件" class="headerlink" title="2.1 启动软件"></a>2.1 启动软件</h2><p><img src="/./img/Xcode%E5%90%AF%E5%8A%A8%E9%A6%96%E9%A1%B5%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode启动首页示例"></p>
+<h2 id="2-2-软件类型"><a href="#2-2-软件类型" class="headerlink" title="2.2 软件类型"></a>2.2 软件类型</h2><p>点击“Create New Project…”来到软件类型选择页面*</p>
 <p><img src="/./img/Xcode%E8%BD%AF%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode软件类型选择页面示例"></p>
 <p>根据自行需要所需选择</p>
 <div class="note info"><p>Note<br>当提示“xxx Not Installed”时，应点击后方“Get”以获取构建版本支持</p>
 <p><img src="/./img/Xcode%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E6%9C%AA%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode构建版本未安装示例"></p>
 </div>
 
-<h2 id="新项目选项"><a href="#新项目选项" class="headerlink" title="新项目选项"></a>新项目选项</h2><p>选择好软件类型点击“Next”来到新项目选项页面</p>
+<h2 id="2-3-新项目选项"><a href="#2-3-新项目选项" class="headerlink" title="2.3 新项目选项"></a>2.3 新项目选项</h2><p>选择好软件类型点击“Next”来到新项目选项页面</p>
 <p><img src="/./img/Xcode%E6%96%B0%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9%E9%A1%B5%E9%9D%A2%E7%A4%BA%E4%BE%8B.PNG" alt="Xcode新项目选项页面示例"></p>
-<p>Product Name<br><sub>产品名称。将应用于软件开启后菜单栏显示、鼠标停滞图标显示及软件窗口顶部</sub></p>
-<p>Team<br><sub>团队。用于团队合作时项目共享，后续软件上架“App Store”须添加</sub></p>
-<p>Organization Identifier<br><sub>组织标识。团队或公司名称</sub></p>
-<p>Bundle Identifier<br><sub>捆绑标识。软件包名，前段为组织标识</sub></p>
-<p>Interface<br><sub>接口。本次选择”SwiftUI”</sub></p>
-<p>Language<br><sub>语言。接口选择”SwiftUI”后，默认使用”Swift”</sub></p>
-<p>Testing System<br><sub>测试系统。用于操作反馈，代码单元测试及集成测试。本次选择“Swift Testing with XCTest UI Tests”</sub></p>
-<p>Storage<br><sub>存储。用于数据持久化，将对象转为为数据存储，后续可还原</sub></p>
-<p>Host in CloudKit<br><sub>云端主机。使用iCloud作为云端数据库，可用于跨平台同步</sub></p>
-<div class="note info"><p>Note<br>标准的“Organization Identifier”写法</p>
+<p><strong>Product Name</strong><br><sub>产品名称。将应用于软件开启后菜单栏显示、鼠标停滞图标显示及软件窗口顶部</sub></p>
+<p><strong>Team</strong><br><sub>团队。用于团队合作时项目共享，后续软件上架“App Store”须添加</sub></p>
+<p><strong>Organization Identifier</strong><br><sub>组织标识。团队或公司名称</sub></p>
+<p><strong>Bundle Identifier</strong><br><sub>捆绑标识。软件包名，前段为组织标识</sub></p>
+<p><strong>Interface</strong><br><sub>接口。本次选择”SwiftUI”</sub></p>
+<p><strong>Language</strong><br><sub>语言。接口选择”SwiftUI”后，默认使用”Swift”</sub></p>
+<p><strong>Testing System</strong><br><sub>测试系统。用于操作反馈，代码单元测试及集成测试。本次选择“Swift Testing with XCTest UI Tests”</sub></p>
+<p><strong>Storage</strong><br><sub>存储。用于数据持久化，将对象转为为数据存储，后续可还原</sub></p>
+<p><strong>Host in CloudKit</strong><br><sub>云端主机。使用iCloud作为云端数据库，可用于跨平台同步</sub></p>
+<div class="note info"><p>Note<br><strong>标准的“Organization Identifier”写法</strong></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#xxx为组织名称</span><br><span class="line">com.xxx</span><br></pre></td></tr></table></figure></div>
     </div>
 
