@@ -1462,7 +1462,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #293647;
+    background: #f6e2c4;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1990,13 +1990,13 @@ pre code {
 }
 .reading-progress-bar {
   --progress: 0;
-  background: #37c6c0;
+  background: #ea6e39;
   height: 3px;
   position: fixed;
   z-index: 50;
   width: var(--progress);
   left: 0;
-  top: 0;
+  bottom: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
