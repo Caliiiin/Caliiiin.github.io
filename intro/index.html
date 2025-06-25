@@ -240,7 +240,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>557</span>
+      <span>555</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -288,7 +288,7 @@
 <h1 id="调整组件"><a href="#调整组件" class="headerlink" title="调整组件"></a>调整组件</h1><p>例如选中文本组件对应的代码行，对其检查，<font color="EA4025">红框</font>部分为选中组件的属性</p>
 <p><img src="/./img/%E9%80%89%E4%B8%AD%E4%BB%A3%E7%A0%81%E8%A1%8C%E7%A4%BA%E4%BE%8B.PNG" alt="选中代码行示例"></p>
 <p>在检查器更改属性后将会在组件代码下方添加属性代码</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line">#例如设置font<span class="operator">/</span>字体为标题样式</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">ContentView</span>: <span class="title class_ inherited__">View</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span> &#123;</span><br><span class="line">        <span class="type">Text</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line">            .font(.title)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="comment">//例如设置font为标题样式</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">ContentView</span>: <span class="title class_ inherited__">View</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span> &#123;</span><br><span class="line">        <span class="type">Text</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line">            .font(.title)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="/./img/%E5%AD%97%E4%BD%93%E6%9B%B4%E6%94%B9%E7%A4%BA%E4%BE%8B.PNG" alt="字体更改示例"></p>
 <p>每个组件有不同的属性，以下介绍几个常见修饰属性</p>
@@ -406,7 +406,7 @@
 <h2 id="搭建接口"><a href="#搭建接口" class="headerlink" title="搭建接口"></a>搭建接口</h2><p>先使用Struct以软件名定义一个结构体，APP协议要求实现body属性</p>
 <p>再使用<strong>var</strong>定义<strong>body</strong>属性，<strong>some Scene</strong>协议要求实现场景</p>
 <p>WindowGroup为场景类型，用于管理视图，最后用它定义视图（可多个）</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="string">#&quot;testApp&quot;需与声明文件名称一致，&quot;ContentView&quot;为视图名称</span></span><br><span class="line"><span class="string">struct testApp: App &#123;</span></span><br><span class="line"><span class="string">    var body: some Scene &#123;</span></span><br><span class="line"><span class="string">        WindowGroup &#123;</span></span><br><span class="line"><span class="string">            ContentView()</span></span><br><span class="line"><span class="string">            #ContentView2()</span></span><br><span class="line"><span class="string">            #ContentView3()</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">testApp</span>: <span class="title class_ inherited__">App</span> &#123;				<span class="comment">//&quot;testApp&quot;需与声明文件名称一致</span></span><br><span class="line">    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">Scene</span> &#123;</span><br><span class="line">        <span class="type">WindowGroup</span> &#123;</span><br><span class="line">            <span class="type">ContentView</span>()		<span class="comment">//&quot;ContentView&quot;为视图名称</span></span><br><span class="line">            #<span class="type">ContentView2</span>()</span><br><span class="line">            #<span class="type">ContentView3</span>()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -866,7 +866,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -884,7 +884,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="标题-章节"><a href="#标题-章节" class="headerlink" title="标题&#x2F;章节"></a>标题&#x2F;章节</h1><h2 id="层级"><a href="#层级" class="headerlink" title="层级"></a>层级</h2><p>如下图所示，共6级依次递进</p>
+          <p>为规范博客文章和GitHub项目介绍的书写，留下此文</p>
+<h1 id="标题-章节"><a href="#标题-章节" class="headerlink" title="标题&#x2F;章节"></a>标题&#x2F;章节</h1><h2 id="层级"><a href="#层级" class="headerlink" title="层级"></a>层级</h2><p>如下图所示，共6级依次递进</p>
 <p><img src="/./img/%E5%9F%BA%E6%9C%AC%E6%92%B0%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-%E5%B1%82%E7%BA%A7%E7%A4%BA%E4%BE%8B.webp" alt="层级示例"></p>
 <p>层级6从属于层级5从属于层级4…每创建一个层级会生成相应定位点以便预览大纲快速跳转</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="section"># 层级1</span></span><br><span class="line"><span class="section">## 层级2</span></span><br><span class="line"><span class="section">### 层级3</span></span><br><span class="line"><span class="section">#### 层级4</span></span><br><span class="line"><span class="section">##### 层级5</span></span><br><span class="line"><span class="section">###### 层级6</span></span><br></pre></td></tr></table></figure>
@@ -1002,6 +1003,8 @@
 
 <h2 id="引用头部（仅Github警告样式）"><a href="#引用头部（仅Github警告样式）" class="headerlink" title="引用头部（仅Github警告样式）"></a>引用头部（仅Github警告样式）</h2><p><img src="/./img/Github%E8%AD%A6%E6%8A%A5%E7%A4%BA%E4%BE%8B.webp" alt="Github警报示例"></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">代码示例</span><br><span class="line"><span class="quote">&gt; [!NOTE]</span></span><br><span class="line"><span class="quote">&gt; Useful information that users should know, even when skimming content.</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; [!TIP]</span></span><br><span class="line"><span class="quote">&gt; Helpful advice for doing things better or more easily.</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; [!IMPORTANT]</span></span><br><span class="line"><span class="quote">&gt; Key information users need to know to achieve their goal.</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; [!WARNING]</span></span><br><span class="line"><span class="quote">&gt; Urgent info that needs immediate user attention to avoid problems.</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; [!CAUTION]</span></span><br><span class="line"><span class="quote">&gt; Advises about risks or negative outcomes of certain actions.</span></span><br></pre></td></tr></table></figure>
+
+<div style="text-align: right;"><a class="btn" href="https://cablog.top/2025/05/28/Markdown-基本撰写和语法格式2/">Next</a></div>
       
     </div>
 
